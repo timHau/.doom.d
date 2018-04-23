@@ -225,6 +225,7 @@
           :desc "APP: email"            :n "M" #'=email
           :desc "APP: twitter"          :n "T" #'=twitter
           :desc "APP: regex"            :n "X" #'=regex
+          :desc "pass"                  :n "p" #'helm-pass
 
           ;; macos
           (:when IS-MAC

@@ -21,7 +21,15 @@
 
 (setq doom-font (font-spec :family "Fira Code" :size 9))
 
+
+(defun newline-without-break-of-line ()
+  (interactive)
+  (let ((oldpos (point)))
+    (end-of-line)
+    (newline-and-indent)))
+
 (after! evil-commands
+  (define-key evil-insert-state-map (kbd "C-o") 'newline-without-break-of-line)
   (define-key evil-insert-state-map (kbd "C-t") 'transpose-chars))
 
 (when (featurep 'evil)
@@ -128,6 +136,10 @@
       (smtpmail-smtp-user     . "tim.hau@hotmail.de")
       (smtpmail-smtp-service  . 587))
     t)
+
+  (require 'auth-source-pass)
+  (auth-source-pass-enable)
+  (use-package helm-pass)
 
   (after! evil-easymotion
     (let ((prefix (concat doom-leader-key " /")))
