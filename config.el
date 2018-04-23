@@ -21,12 +21,14 @@
 
 (setq doom-font (font-spec :family "Fira Code" :size 9))
 
-
 (defun newline-without-break-of-line ()
   (interactive)
   (let ((oldpos (point)))
     (end-of-line)
     (newline-and-indent)))
+
+(after! evil
+  (setq shift-select-mode t))
 
 (after! evil-commands
   (define-key evil-insert-state-map (kbd "C-o") 'newline-without-break-of-line)
@@ -158,3 +160,4 @@
                      :bind ((evil-snipe-scope 'buffer)
                             (evil-snipe-enable-highlight)
                             (evil-snipe-enable-incremental-highlight))))))
+

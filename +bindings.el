@@ -53,6 +53,8 @@
       "A-f"       #'backward-word
       "C-a"       #'doom/backward-to-bol-or-indent
       "A--"       #'shrink-window
+      "M-z"       #'undo-tree-undo
+      "M-Z"       #'undo-tree-redo
 
       ;; Other sensible, textmate-esque global bindings
       :ne "M-r"   #'+eval/buffer
