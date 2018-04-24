@@ -34,6 +34,8 @@
   (define-key evil-insert-state-map (kbd "C-o") 'newline-without-break-of-line)
   (define-key evil-insert-state-map (kbd "C-t") 'transpose-chars))
 
+(setq +doom-modeline-height 23)
+
 (when (featurep 'evil)
   (load! +evil-commands)
 
@@ -84,7 +86,8 @@
   (setq-default mac-right-option-modifier nil)
   (setq mac-right-command-modifier 'control)
   (require 'company)
-  (setq company-idle-delay 0.2)
+  (setq company-idle-delay 0.6
+        company-minimum-prefix-length 3)
 
   (require 'helm-ag)
 
@@ -123,7 +126,6 @@
 
 
   ;; mail
-
   (require 'smtpmail)
   (set! :email "tim.hau@hotmail.de"
     '((mu4e-sent-folder       . "/hotmail/Sent")
@@ -142,6 +144,15 @@
   (require 'auth-source-pass)
   (auth-source-pass-enable)
   (use-package helm-pass)
+
+  ;; sage nath
+  (require 'sage-shell-mode)
+  (sage-shell:define-alias)
+
+  ;; smartparens
+  (setq sp-autowrap-region t
+        sp-max-pair-length 2)
+
 
   (after! evil-easymotion
     (let ((prefix (concat doom-leader-key " /")))

@@ -220,12 +220,11 @@
                                         :v  "r" #'+eval:repl
           :desc "Neotree"               :n  "n" #'+neotree/toggle
           :desc "Terminal"              :n  "t" #'+term/open-popup
-          :desc "Terminal in project"   :n  "T" #'+term/open-popup-in-project
+          :desc "Top"                   :n  "T" #'helm-top
 
           ;; applications
           :desc "APP: elfeed"           :n "E" #'=rss
           :desc "APP: email"            :n "M" #'=email
-          :desc "APP: twitter"          :n "T" #'=twitter
           :desc "APP: regex"            :n "X" #'=regex
           :desc "pass"                  :n "p" #'helm-pass
 

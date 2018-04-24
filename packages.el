@@ -13,3 +13,7 @@
 (package! helm-pass
   :recipe (:fetcher github
            :repo "jabranham/helm-pass"))
+
+(package! sage-shell-mode
+  :recipe (:fetcher github
+           :repo "sagemath/sage-shell-mode"))
