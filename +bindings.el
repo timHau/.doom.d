@@ -40,6 +40,7 @@
       "M-1"       #'neotree-find
       "A-l"       #'forward-word
       "A-h"       #'backward-word
+      :i "M-x"    #'kill-region
 
       ;; general stuff
       "C--"       #'comment-line
@@ -50,11 +51,13 @@
       "A-r"       #'recentf-open-files
       "A-<backspace>" #'backward-kill-word
       "A-b"       #'backward-word
-      "A-f"       #'backward-word
+      "A-f"       #'forward-word
       "C-a"       #'doom/backward-to-bol-or-indent
       "A--"       #'shrink-window
       "M-z"       #'undo-tree-undo
       "M-Z"       #'undo-tree-redo
+      :v "V"      #'evil-visual-line
+      :i "C-t"    #'transpose-chars
 
       ;; Other sensible, textmate-esque global bindings
       :ne "M-r"   #'+eval/buffer
@@ -603,6 +606,11 @@
           "<M-right>"   nil))
 
 
+      ;; --- Term mode bindings --------------------------
+      (:after term-mode
+        (:map term-mode-map
+          "M-w"  #'+workspace/close-window-or-workspace))
+
       ;; --- Custom evil text-objects ---------------------
       :textobj "a" #'evil-inner-arg                    #'evil-outer-arg
       :textobj "B" #'evil-textobj-anyblock-inner-block #'evil-textobj-anyblock-a-block
@@ -686,6 +694,10 @@
           :i [remap doom/inflate-space-maybe] #'org-self-insert-command
           :i "C-e" #'org-end-of-line
           :i "C-a" #'org-beginning-of-line))
+
+      (:map sage-shell-mode-map
+        "C-p" #'previous-buffer
+        "C-k" #'widget-kill-line)
 
       ;; Restore common editing keys (and ESC) in minibuffer
       (:map (minibuffer-local-map

@@ -21,18 +21,20 @@
 
 (setq doom-font (font-spec :family "Fira Code" :size 9))
 
+(setq x-select-enable-clipboard t)
+
 (defun newline-without-break-of-line ()
   (interactive)
   (let ((oldpos (point)))
-    (end-of-line)
-    (newline-and-indent)))
+    (beginning-of-line)
+    (doom/newline-and-indent)
+    (previous-line)))
 
 (after! evil
   (setq shift-select-mode t))
 
 (after! evil-commands
-  (define-key evil-insert-state-map (kbd "C-o") 'newline-without-break-of-line)
-  (define-key evil-insert-state-map (kbd "C-t") 'transpose-chars))
+  (define-key evil-insert-state-map (kbd "C-o") 'newline-without-break-of-line))
 
 (setq +doom-modeline-height 23)
 
@@ -124,7 +126,6 @@
       (set-char-table-range composition-function-table (car char-regexp)
                             `([,(cdr char-regexp) 0 font-shape-gstring]))))
 
-
   ;; mail
   (require 'smtpmail)
   (set! :email "tim.hau@hotmail.de"
@@ -152,7 +153,6 @@
   ;; smartparens
   (setq sp-autowrap-region t
         sp-max-pair-length 2)
-
 
   (after! evil-easymotion
     (let ((prefix (concat doom-leader-key " /")))
