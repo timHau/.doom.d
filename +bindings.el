@@ -21,6 +21,7 @@
       ;; A little sandbox to run code in
       :gnvime "M-;" #'eval-expression
       :gnvime "M-:" #'doom/open-scratch-buffer
+      :gnvime "M-c" #'evil-yank
 
       ;; Text-scaling
       "M-+"       (λ! (text-scale-set 0))
@@ -695,9 +696,10 @@
           :i "C-e" #'org-end-of-line
           :i "C-a" #'org-beginning-of-line))
 
-      (:map sage-shell-mode-map
+      (:after sage-shell-mode
+        (:map sage-shell-mode-map
         "C-p" #'previous-buffer
-        "C-k" #'widget-kill-line)
+        "C-k" #'widget-kill-line))
 
       ;; Restore common editing keys (and ESC) in minibuffer
       (:map (minibuffer-local-map
