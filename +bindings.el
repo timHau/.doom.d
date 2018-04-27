@@ -108,10 +108,15 @@
 
         (:desc "search" :prefix "s"
           :desc "buffer"                :nv "s" #'+helm:swoop
-          :desc "project"               :nv "a" #'helm-ag
+          :desc "project"               :nv "a" #'helm-ag-project-root
           :desc "Imenu"                 :nv "i" #'imenu
           :desc "Imenu across buffers"  :nv "I" #'imenu-anywhere
           :desc "Online providers"      :nv "o" #'+jump/online-select)
+
+        (:desc "juml" :prefix "j"
+          :desc "definiton" :nv "d" #'dumb-jump-go
+          :desc "word"      :nv "w" #'avy-goto-word-1
+          :desc "line"      :nv "l" #'avy-goto-line)
 
         (:desc "workspace" :prefix "+"
           :desc "Display tab bar"          :n "+" #'+workspace/display
@@ -323,7 +328,6 @@
         "c"       #'+workspace/close-window-or-workspace
         "C-C"     #'ace-delete-window)
 
-
       ;; --- Plugin bindings ------------------------------
       ;; auto-yasnippet
       :i  [C-tab] #'aya-expand
@@ -353,6 +357,7 @@
           "C-s"        #'company-filter-candidates
           "C-SPC"      #'company-complete-common
           "C-h"        #'company-quickhelp-manual-begin
+          "SPC"        nil
           [tab]        #'company-complete-common-or-cycle
           [backtab]    #'company-select-previous
           [escape]     (λ! (company-abort) (evil-normal-state 1)))
@@ -686,9 +691,9 @@
       ;;   a) balance spaces inside brackets/parentheses ( | ) -> (|)
       ;;   b) delete space-indented blocks intelligently
       ;;   c) do none of this when inside a string
-      :i "SPC"                          #'doom/inflate-space-maybe
-      :i [remap delete-backward-char]   #'doom/deflate-space-maybe
-      :i [remap newline]                #'doom/newline-and-indent
+      ;; :i "SPC"                          #'doom/inflate-space-maybe
+      ;; :i [remap delete-backward-char]   #'doom/deflate-space-maybe
+      ;; :i [remap newline]                #'doom/newline-and-indent
 
       (:after org
         (:map org-mode-map

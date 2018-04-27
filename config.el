@@ -21,7 +21,15 @@
 
 (setq doom-font (font-spec :family "Fira Code" :size 9))
 
+(after! highlight-indentation-mode
+  (set-face-background 'highlight-indentation-face "#e3e3d3"))
+
+(setq flycheck-disabled-checkers '(scss-stylelint sass/scss-sass-lint scss-lint scss))
+
 (setq x-select-enable-clipboard t)
+
+(after! evil
+  (setq shift-select-mode t))
 
 (defun newline-without-break-of-line ()
   (interactive)
@@ -29,9 +37,6 @@
     (beginning-of-line)
     (doom/newline-and-indent)
     (previous-line)))
-
-(after! evil
-  (setq shift-select-mode t))
 
 (after! evil-commands
   (define-key evil-insert-state-map (kbd "C-o") 'newline-without-break-of-line))
@@ -88,10 +93,14 @@
   (setq-default mac-right-option-modifier nil)
   (setq mac-right-command-modifier 'control)
   (require 'company)
-  (setq company-idle-delay 0.6
-        company-minimum-prefix-length 3)
+  (after! company
+    (setq company-idle-delay 0.6
+          company-auto-complete-chars nil
+          company-minimum-prefix-length 3))
 
   (require 'helm-ag)
+  (after! helm-ag
+    (setq helm-ag-fuzzy-match t))
 
   ;; fancy symbols
   (defconst lisp--prettify-symbols-alist
