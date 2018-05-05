@@ -28,20 +28,19 @@
 
 (setq x-select-enable-clipboard t)
 
-(after! evil
-  (setq shift-select-mode t))
+(setq shift-select-mode t)
 
 (defun newline-without-break-of-line ()
   (interactive)
   (let ((oldpos (point)))
     (beginning-of-line)
-    (doom/newline-and-indent)
+    (doom*newline-and-indent 3)
     (previous-line)))
 
 (after! evil-commands
   (define-key evil-insert-state-map (kbd "C-o") 'newline-without-break-of-line))
 
-(setq +doom-modeline-height 23)
+(setq +doom-modeline-height 22)
 
 (when (featurep 'evil)
   (load! +evil-commands)
@@ -94,13 +93,9 @@
   (setq mac-right-command-modifier 'control)
   (require 'company)
   (after! company
-    (setq company-idle-delay 0.6
+    (setq company-idle-delay 0.4
           company-auto-complete-chars nil
           company-minimum-prefix-length 3))
-
-  (require 'helm-ag)
-  (after! helm-ag
-    (setq helm-ag-fuzzy-match t))
 
   ;; fancy symbols
   (defconst lisp--prettify-symbols-alist
@@ -151,17 +146,21 @@
       (smtpmail-smtp-service  . 587))
     t)
 
-  (require 'auth-source-pass)
-  (auth-source-pass-enable)
-  (use-package helm-pass)
-
-  ;; sage nath
-  (require 'sage-shell-mode)
-  (sage-shell:define-alias)
+  ;; sage math
+  (use-package sage-shell-mode
+    :init (setq sage-shell:sage-root "~/.emacs.d/.local/packages/quelpa/build/sage-shell-mode/")
+    :config (sage-shell:define-alias))
 
   ;; smartparens
   (setq sp-autowrap-region t
         sp-max-pair-length 2)
+
+  (after! haskell-mode
+    (setq highlight-indentation-mode nil))
+
+  (after! neotree
+    (setq neo-window-width 30
+          show-hidden-files t))
 
   (after! evil-easymotion
     (let ((prefix (concat doom-leader-key " /")))

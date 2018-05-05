@@ -38,7 +38,7 @@
       "M-W"       #'+workspace/close-workspace-or-frame
       "M-n"       #'evil-buffer-new
       "M-N"       #'make-frame
-      "M-1"       #'neotree-find
+      "M-1"       #'neotree-toggle
       "A-l"       #'forward-word
       "A-h"       #'backward-word
       :i "M-x"    #'kill-region
@@ -107,13 +107,13 @@
         :desc "window"                  :n "w"  evil-window-map
 
         (:desc "search" :prefix "s"
-          :desc "buffer"                :nv "s" #'+helm:swoop
-          :desc "project"               :nv "a" #'helm-ag-project-root
+          :desc "buffer"                :nv "s" #'swiper
+          :desc "project"               :nv "a" #'+ivy:ag
           :desc "Imenu"                 :nv "i" #'imenu
           :desc "Imenu across buffers"  :nv "I" #'imenu-anywhere
           :desc "Online providers"      :nv "o" #'+jump/online-select)
 
-        (:desc "juml" :prefix "j"
+        (:desc "jump" :prefix "j"
           :desc "definiton" :nv "d" #'dumb-jump-go
           :desc "word"      :nv "w" #'avy-goto-word-1
           :desc "line"      :nv "l" #'avy-goto-line)
@@ -145,15 +145,14 @@
 
         (:desc "buffer" :prefix "b"
           :desc "New empty buffer"        :n "N" #'evil-buffer-new
-          :desc "Switch workspace buffer" :n "b" #'persp-switch-to-buffer
-          :desc "Switch buffer"           :n "B" #'switch-to-buffer
-          :desc "Kill buffer"             :n "d" #'doom/kill-this-buffer
+          :desc "Switch buffer"           :n "b" #'switch-to-buffer
+          :desc "Kill buffer"             :n "d" #'kill-this-buffer
           :desc "Kill other buffers"      :n "o" #'doom/kill-other-buffers
           :desc "Save buffer"             :n "s" #'save-buffer
           :desc "Pop scratch buffer"      :n "x" #'doom/open-scratch-buffer
           :desc "Bury buffer"             :n "z" #'bury-buffer
-          :desc "Next buffer"             :n "n" #'doom/next-buffer
-          :desc "Previous buffer"         :n "p" #'doom/previous-buffer
+          :desc "Next buffer"             :n "n" #'next-buffer
+          :desc "Previous buffer"         :n "p" #'previous-buffer
           :desc "Sudo edit this file"     :n "S" #'doom/sudo-this-file)
 
         (:desc "code" :prefix "c"
@@ -227,15 +226,14 @@
           :desc "Debugger"              :n  "d" #'+debug/open
           :desc "REPL"                  :n  "r" #'+eval/open-repl
                                         :v  "r" #'+eval:repl
-          :desc "Neotree"               :n  "n" #'+neotree/toggle
+          :desc "Neotree"               :n  "n" #'neotree-toggle
           :desc "Terminal"              :n  "t" #'+term/open-popup
-          :desc "Top"                   :n  "T" #'helm-top
+          :desc "pass"                  :n  "p" #'pass
 
           ;; applications
           :desc "APP: elfeed"           :n "E" #'=rss
           :desc "APP: email"            :n "M" #'=email
           :desc "APP: regex"            :n "X" #'=regex
-          :desc "pass"                  :n "p" #'helm-pass
 
           ;; macos
           (:when IS-MAC
@@ -371,8 +369,8 @@
       ;; counsel
       (:after counsel
         (:map counsel-ag-map
-          [backtab]  #'+ivy/wgrep-occur      ; search/replace on results
-          "C-SPC"    #'ivy-call-and-recenter ; preview
+          "C-e"      #'+ivy/wgrep-occur      ; search/replace on results
+          [tab]      #'ivy-call-and-recenter ; preview
           "M-RET"    (+ivy-do-action! #'+ivy-git-grep-other-window-action)))
 
       ;; evil-commentary
@@ -521,19 +519,15 @@
 
       ;; ivy
       (:after ivy
-        :map ivy-minibuffer-map
-        [escape] #'keyboard-escape-quit
-        "C-SPC" #'ivy-call-and-recenter
-        "M-v" #'yank
-        "M-z" #'undo
-        "C-r" #'evil-paste-from-register
-        "C-k" #'ivy-previous-line
-        "C-j" #'ivy-next-line
-        "C-l" #'ivy-alt-done
-        "M-h" #'ivy-backward-kill-word
-        "C-u" #'ivy-kill-line
-        "A-b" #'backward-word
-        "A-f" #'forward-word)
+        (:map ivy-minibuffer-map
+          [escape] #'keyboard-escape-quit
+          "C-SPC" #'ivy-call-and-recenter
+          "M-v" #'yank
+          "M-z" #'undo
+          "C-r" #'evil-paste-from-register
+          "C-u" #'ivy-kill-line
+          "A-b" #'backward-word
+          "A-f" #'forward-word))
 
       ;; neotree
       (:after neotree
@@ -705,6 +699,8 @@
         (:map sage-shell-mode-map
         "C-p" #'previous-buffer
         "C-k" #'widget-kill-line))
+
+
 
       ;; Restore common editing keys (and ESC) in minibuffer
       (:map (minibuffer-local-map
