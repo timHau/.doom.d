@@ -145,10 +145,11 @@
       (smtpmail-smtp-user     . "tim.hau@hotmail.de")
       (smtpmail-smtp-service  . 587))
     t)
+  (use-package mu4e
+    :config (setq mu4e-get-mail-command "offlineimap"))
 
   ;; sage math
   (use-package sage-shell-mode
-    :init (setq sage-shell:sage-root "~/.emacs.d/.local/packages/quelpa/build/sage-shell-mode/")
     :config (sage-shell:define-alias))
 
   ;; smartparens

@@ -368,6 +368,9 @@
 
       ;; counsel
       (:after counsel
+        (:map counsel-find-file-map
+          "A-l"      #'ivy-alt-done
+          "A-h"      #'ivy-backward-delete-char)
         (:map counsel-ag-map
           "C-e"      #'+ivy/wgrep-occur      ; search/replace on results
           [tab]      #'ivy-call-and-recenter ; preview
