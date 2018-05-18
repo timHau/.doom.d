@@ -1,6 +1,8 @@
 ;;; private/default/config.el -*- lexical-binding: t; -*-
 
 (load! +bindings)
+(load! +ui)
+(load! +mail)
 
 
 ;;
@@ -19,7 +21,6 @@
         ;; prompt for the key passphrase.
         epa-pinentry-mode 'loopback))
 
-(setq doom-font (font-spec :family "Fira Code" :size 9))
 
 (after! highlight-indentation-mode
   (set-face-background 'highlight-indentation-face "#e3e3d3"))
@@ -39,8 +40,6 @@
 
 (after! evil-commands
   (define-key evil-insert-state-map (kbd "C-o") 'newline-without-break-of-line))
-
-(setq +doom-modeline-height 22)
 
 (when (featurep 'evil)
   (load! +evil-commands)
@@ -97,66 +96,15 @@
           company-auto-complete-chars nil
           company-minimum-prefix-length 3))
 
-  (after! avy
-    (setq avy-all-windows t))
+  ;; (after! avy
+    ;; (setq avy-all-windows t))
 
   (after! css
     (setq css-indent-offset 2))
 
-  ;; fancy symbols
-  (defconst lisp--prettify-symbols-alist
-    '(("lambda"  . ?λ)))
-
-  (let ((alist '((33 . ".\\(?:\\(?:==\\|!!\\)\\|[!=]\\)")
-                 (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
-                 (36 . ".\\(?:>\\)")
-                 (37 . ".\\(?:\\(?:%%\\)\\|%\\)")
-                 (38 . ".\\(?:\\(?:&&\\)\\|&\\)")
-                 (42 . ".\\(?:\\(?:\\*\\*/\\)\\|\\(?:\\*[*/]\\)\\|[*/>]\\)")
-                 (43 . ".\\(?:\\(?:\\+\\+\\)\\|[+>]\\)")
-                 (45 . ".\\(?:\\(?:-[>-]\\|<<\\|>>\\)\\|[<>}~-]\\)")
-                 (47 . ".\\(?:\\(?:\\*\\*\\|//\\|==\\)\\|[*/=>]\\)")
-                 (58 . ".\\(?:::\\|[:=]\\)")
-                 (59 . ".\\(?:;;\\|;\\)")
-                 (60 . ".\\(?:\\(?:!--\\)\\|\\(?:~~\\|->\\|\\$>\\|\\*>\\|\\+>\\|--\\|<[<=-]\\|=[<=>]\\||>\\)\\|[*$+~/<=>|-]\\)")
-                 (61 . ".\\(?:\\(?:/=\\|:=\\|<<\\|=[=>]\\|>>\\)\\|[<=>~]\\)")
-                 (62 . ".\\(?:\\(?:=>\\|>[=>-]\\)\\|[=>-]\\)")
-                 (63 . ".\\(?:\\(\\?\\?\\)\\|[:=?]\\)")
-                 (91 . ".\\(?:]\\)")
-                 (92 . ".\\(?:\\(?:\\\\\\\\\\)\\|\\\\\\)")
-                 (94 . ".\\(?:=\\)")
-                 (119 . ".\\(?:ww\\)")
-                 (123 . ".\\(?:-\\)")
-                 (124 . ".\\(?:\\(?:|[=|]\\)\\|[=>|]\\)")
-                 (126 . ".\\(?:~>\\|~~\\|[>=@~-]\\)")
-                 )
-               ))
-
-    (dolist (char-regexp alist)
-      (set-char-table-range composition-function-table (car char-regexp)
-                            `([,(cdr char-regexp) 0 font-shape-gstring]))))
-
-  ;; mail
-  (require 'smtpmail)
-  (set! :email "tim.hau@hotmail.de"
-    '((mu4e-sent-folder       . "/hotmail/Sent")
-      (mu4e-drafts-folder     . "/hotmail/Drafts")
-      (mu4e-trash-folder      . "/hotmail/Deleted")
-      (mu4e-refile-folder     . "/hotmail/Inbox")
-      (smtpmail-smtp-user     . "tim.hau@hotmail.de")
-      (user-mail-address      . "tim.hau@hotmail.de")
-      (user-full-name         . "tim hau")
-      (mu4e-compose-signature . "")
-      (smtpmail-smtp-server   . "smtp-mail.outlook.com")
-      (smtpmail-smtp-user     . "tim.hau@hotmail.de")
-      (smtpmail-smtp-service  . 587))
-    t)
-  (use-package mu4e
-    :config (setq mu4e-get-mail-command "offlineimap"))
-
   ;; sage math
-  (use-package sage-shell-mode
-    :config (sage-shell:define-alias))
+  ;; (use-package sage-shell-mode
+    ;; :config (sage-shell:define-alias))
 
   ;; smartparens
   (setq sp-autowrap-region t
@@ -164,10 +112,6 @@
 
   (after! haskell-mode
     (setq highlight-indentation-mode nil))
-
-  (after! neotree
-    (setq neo-window-width 30
-          show-hidden-files t))
 
   (after! evil-easymotion
     (let ((prefix (concat doom-leader-key " /")))
