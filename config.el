@@ -97,6 +97,12 @@
           company-auto-complete-chars nil
           company-minimum-prefix-length 3))
 
+  (after! avy
+    (setq avy-all-windows t))
+
+  (after! css
+    (setq css-indent-offset 2))
+
   ;; fancy symbols
   (defconst lisp--prettify-symbols-alist
     '(("lambda"  . ?λ)))

@@ -89,7 +89,7 @@
         :desc "M-x"                     :nv ":"  #'execute-extended-command
         :desc "Pop up scratch buffer"   :nv "x"  #'doom/open-scratch-buffer
         :desc "Org Capture"             :nv "X"  #'+org-capture/open
-        :desc "kill-ring"               :nv "y"  #'helm-show-kill-ring
+        :desc "kill-ring"               :nv "y"  #'counsel-yank-pop
 
         ;; Most commonly used
         :desc "Find file in project"    :n "SPC" #'projectile-find-file
@@ -659,7 +659,6 @@
 ;;
 
 ;; This section is dedicated to "fixing" certain keys so that they behave
-;; properly, more like vim, or how I like it.
 
 (map! (:map input-decode-map
         [S-iso-lefttab] [backtab]

@@ -2,9 +2,6 @@
 ;; Copy me to ~/.doom.d/init.el or ~/.config/doom/init.el, then edit me!
 
 (doom! :feature
-       (popup            ; tame sudden yet inevitable temporary windows
-        +all             ; catch all popups that start with an asterix
-        +defaults)       ; default popup rules
       ;debugger          ; FIXME stepping through code, to help you add bugs
        eval              ; run code, run (also, repls)
        (evil +everywhere); come to the dark side, we have cookies
@@ -25,9 +22,13 @@
         +childframe)     ; a nicer company UI. Emacs +26 only!
       ;helm              ; the *other* search engine for love and life
       ;ido               ; the other *other* search engine...
-      ivy               ; a search engine for love and life
+      (ivy               ; a search engine for love and life
+       +childframe)      ; uses childframes for popups (Emacs 26+ only)
 
        :ui
+       (popup            ; tame sudden yet inevitable temporary windows
+        +all             ; catch all popups that start with an asterix
+        +defaults)       ; default popup rules
        doom              ; what makes DOOM look the way it does
        doom-dashboard    ; a nifty splash screen for Emacs
        doom-modeline     ; a snazzy Atom-inspired mode-line
@@ -35,24 +36,24 @@
        evil-goggles      ; display visual hints when editing in evil
        hl-todo           ; highlight TODO/FIXME/NOTE tags
        nav-flash         ; blink the current line after jumping
-      ;posframe          ; use child frames where possible (Emacs 26+ only)
+       posframe          ; use child frames where possible (Emacs 26+ only)
       ;tabbar            ; FIXME an (incomplete) tab bar for Emacs
-      ;unicode           ; extended unicode support for various languages
+       unicode           ; extended unicode support for various languages
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        window-select     ; visually switch windows
+       neotree           ; a project drawer, like NERDTree for vim
 
        :tools
        dired             ; making dired pretty [functional]
        ein               ; tame Jupyter notebooks with emacs
        electric-indent   ; smarter, keyword-based electric-indent
-       ;; eshell            ; a consistent, cross-platform shell (WIP)
+       eshell            ; a consistent, cross-platform shell (WIP)
        gist              ; interacting with github gists
        imenu             ; an imenu sidebar and searchable code index
        impatient-mode    ; show off code over HTTP
        macos             ; MacOS-specific commands
-       ;; make              ; run make tasks from Emacs
+       make              ; run make tasks from Emacs
        magit             ;
-       neotree           ; a project drawer, like NERDTree for vim
        password-store    ; password manager for nerds
        pdf               ; pdf enhancements
        rgb               ; creating color strings
@@ -63,20 +64,20 @@
 
        :lang
        ;; assembly          ; assembly for fun or debugging
-       ;; cc                ; C/C++/Obj-C madness
+       cc                ; C/C++/Obj-C madness
        ;; crystal           ; ruby at the speed of c
        clojure           ; java with a lisp
-       ;; csharp            ; unity, .NET, and mono shenanigans
+       csharp            ; unity, .NET, and mono shenanigans
        data              ; config/data formats
-      ;erlang            ; an elegant language for a more civilized age
+       erlang            ; an elegant language for a more civilized age
        ;; elixir            ; erlang done right
        ;; elm               ; care for a cup of TEA?
        emacs-lisp        ; drown in parentheses
        ;; ess               ; emacs speaks statistics
-       ;; go                ; the hipster dialect
+       go                ; the hipster dialect
        (haskell +intero) ; a language that's lazier than I am
        ;; hy                ; readability of scheme w/ speed of python
-       ;; (java +meghanada) ; the poster child for carpal tunnel syndrome
+       (java +meghanada) ; the poster child for carpal tunnel syndrome
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
        ;; julia             ; a better, faster MATLAB
        latex             ; writing papers in Emacs has never been so fun
@@ -84,7 +85,7 @@
        ;; lua               ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore
        ;; nix               ; I hereby declare "nix geht mehr!"
-       ;; ocaml             ; an objective camel
+       ocaml             ; an objective camel
        (org              ; organize your plain life in plain text
         +attach          ; custom attachment system
         +babel           ; running code in org
