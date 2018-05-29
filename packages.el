@@ -6,6 +6,4 @@
            :repo "hlissner/emacs-snippets"
            :files ("*")))
 
-;; (package! sage-shell-mode
-  ;; :recipe (:fetcher github
-          ;; :repo "sagemath/sage-shell-mode"))
+(package! sage-shell-mode)

@@ -14,9 +14,8 @@
     (smtpmail-smtp-user     . "tim.hau@hotmail.de")
     (smtpmail-smtp-service  . 587))
   t)
-(use-package mu4e
-  :config (setq mu4e-get-mail-command "offlineimap"))
+;; (use-package mu4e
+  ;; :config (setq mu4e-get-mail-command "offlineimap"))
 
 
 (provide '+mail)
-;;; +ui.el ends here

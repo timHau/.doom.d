@@ -222,17 +222,20 @@
           :desc "Browse project notes"  :n  "p" #'+org/browse-notes-for-project)
 
         (:desc "open" :prefix "o"
+          :desc "agenda"                :n  "a" #'org-agenda
           :desc "Default browser"       :n  "b" #'browse-url-of-file
           :desc "Debugger"              :n  "d" #'+debug/open
           :desc "REPL"                  :n  "r" #'+eval/open-repl
                                         :v  "r" #'+eval:repl
           :desc "Neotree"               :n  "n" #'neotree-toggle
           :desc "Terminal"              :n  "t" #'+term/open-popup
+          :desc "eshell"                :n  "e" #'eshell
           :desc "pass"                  :n  "p" #'pass
 
           ;; applications
           :desc "APP: elfeed"           :n "E" #'=rss
           :desc "APP: email"            :n "M" #'=email
+          :desc "APP: irc"              :n "i" #'znc-erc
           :desc "APP: regex"            :n "X" #'=regex
 
           ;; macos
@@ -256,6 +259,7 @@
 
         (:desc "quit" :prefix "q"
           :desc "Quit"                   :n "q" #'evil-save-and-quit
+          :desc "Restart"                :n "r" #'restart-emacs
           :desc "Quit (forget session)"  :n "Q" #'+workspace/kill-session-and-quit)
 
         (:desc "remote" :prefix "r"
@@ -369,8 +373,8 @@
       ;; counsel
       (:after counsel
         (:map counsel-find-file-map
-          "A-l"      #'ivy-alt-done
-          "A-h"      #'ivy-backward-delete-char)
+          "M-e"      #'ivy-alt-done
+          "M-f"      #'ivy-backward-delete-char)
         (:map counsel-ag-map
           "C-e"      #'+ivy/wgrep-occur      ; search/replace on results
           [tab]      #'ivy-call-and-recenter ; preview
@@ -489,6 +493,12 @@
         :n "s"   #'gist-star
         :n "S"   #'gist-unstar
         :n "y"   #'gist-print-current-url)
+
+      ;; js
+      (:after tide
+        :map tide-mode-map
+        :localleader
+        :n "e"  #'nodejs-repl)
 
       ;; helm
       (:after helm

@@ -9,10 +9,10 @@
        (lookup           ; helps you navigate your code and documentation
         +devdocs         ; ...on devdocs.io online
         +docsets)        ; ...or in Dash docsets locally
-       services          ; TODO managing external services & code builders
        snippets          ; my elves. They type so I don't have to
        spellcheck        ; tasing you for misspelling mispelling
-       syntax-checker    ; tasing you for every semicolon you forget
+       (syntax-checker   ; tasing you for every semicolon you forget
+        +childframe)     ; use childframes for error popups (Emacs 26+ only)
        version-control   ; remember, remember that commit in November
        workspaces        ; tab emulation, persistence & separate workspaces
 
@@ -22,8 +22,8 @@
         +childframe)     ; a nicer company UI. Emacs +26 only!
       ;helm              ; the *other* search engine for love and life
       ;ido               ; the other *other* search engine...
-      (ivy               ; a search engine for love and life
-       +childframe)      ; uses childframes for popups (Emacs 26+ only)
+       (ivy               ; a search engine for love and life
+        +childframe)      ; uses childframes for popups (Emacs 26+ only)
 
        :ui
        (popup            ; tame sudden yet inevitable temporary windows
@@ -36,7 +36,6 @@
        evil-goggles      ; display visual hints when editing in evil
        hl-todo           ; highlight TODO/FIXME/NOTE tags
        nav-flash         ; blink the current line after jumping
-       posframe          ; use child frames where possible (Emacs 26+ only)
       ;tabbar            ; FIXME an (incomplete) tab bar for Emacs
        unicode           ; extended unicode support for various languages
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
@@ -44,13 +43,9 @@
        neotree           ; a project drawer, like NERDTree for vim
 
        :tools
-       dired             ; making dired pretty [functional]
+       editorconfig      ; let someone else argue about tabs vs spaces
        ein               ; tame Jupyter notebooks with emacs
-       electric-indent   ; smarter, keyword-based electric-indent
-       eshell            ; a consistent, cross-platform shell (WIP)
        gist              ; interacting with github gists
-       imenu             ; an imenu sidebar and searchable code index
-       impatient-mode    ; show off code over HTTP
        macos             ; MacOS-specific commands
        make              ; run make tasks from Emacs
        magit             ;
@@ -58,9 +53,16 @@
        pdf               ; pdf enhancements
        rgb               ; creating color strings
        rotate-text       ; cycle region at point between text candidates
-       term              ; terminals in Emacs
        tmux              ; an API for interacting with tmux
        upload            ; map local to remote projects via ssh/ftp
+
+       :emacs
+       dired             ; making dired pretty [functional]
+       ediff             ; comparing files in Emacs
+       electric-indent   ; smarter, keyword-based electric-indent
+       eshell            ; a consistent, cross-platform shell (WIP)
+       imenu             ; an imenu sidebar and searchable code index
+       term              ; terminals in Emacs
 
        :lang
        ;; assembly          ; assembly for fun or debugging
@@ -111,7 +113,7 @@
        ;; toward a specific purpose. They may have additional dependencies and
        ;; should be loaded late.
        :app
-      (email +gmail)    ; emacs as an email client
+      (email)            ; emacs as an email client
       ;irc               ; how neckbeards socialize
       ;(rss +org)        ; emacs as an RSS reader
       ;twitter           ; twitter client https://twitter.com/vnought

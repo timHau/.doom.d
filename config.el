@@ -1,8 +1,8 @@
 ;;; private/default/config.el -*- lexical-binding: t; -*-
 
-(load! +bindings)
-(load! +ui)
-(load! +mail)
+(load! "./+bindings")
+(load! "./+ui")
+(load! "./+mail")
 
 
 ;;
@@ -42,7 +42,7 @@
   (define-key evil-insert-state-map (kbd "C-o") 'newline-without-break-of-line))
 
 (when (featurep 'evil)
-  (load! +evil-commands)
+  (load! "./+evil-commands")
 
   ;; Makes ; and , the universal repeat-keys in evil-mode
   (defmacro do-repeat! (command next-func prev-func)
@@ -103,8 +103,8 @@
     (setq css-indent-offset 2))
 
   ;; sage math
-  ;; (use-package sage-shell-mode
-    ;; :config (sage-shell:define-alias))
+  (use-package sage-shell-mode
+    :config (sage-shell:define-alias))
 
   ;; smartparens
   (setq sp-autowrap-region t
