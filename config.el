@@ -90,11 +90,11 @@
 
   (setq-default mac-right-option-modifier nil)
   (setq mac-right-command-modifier 'control)
-  (require 'company)
+
   (after! company
-    (setq company-idle-delay 0.4
+    (setq company-idle-delay 0.3
           company-auto-complete-chars nil
-          company-minimum-prefix-length 3))
+          company-minimum-prefix-length 2))
 
   (after! css
     (setq css-indent-offset 2))
@@ -102,6 +102,11 @@
   ;; sage math
   (use-package sage-shell-mode
     :config (sage-shell:define-alias))
+
+  ;; wttrin
+  (after! wttrin
+    :init (setq wttrin-default-cities '("Frankfurt")
+                wttrin-default-accept-language '("Accept-Language" . "de-DE,de;q=0.9,en;q=0.8,en-US;q=0.7,fr;q=0.6")))
 
   ;; smartparens
   (setq sp-autowrap-region t

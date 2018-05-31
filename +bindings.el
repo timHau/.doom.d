@@ -78,26 +78,19 @@
       :en "C-k"   #'evil-window-up
       :en "C-l"   #'evil-window-right
 
-      "C-x p"     #'doom/other-popup
-
 
       ;; --- <leader> -------------------------------------
       (:leader
         :desc "Ex command"              :nv ";"  #'evil-ex
         :desc "M-x"                     :nv ":"  #'execute-extended-command
-        :desc "Pop up scratch buffer"   :nv "x"  #'doom/open-scratch-buffer
         :desc "Org Capture"             :nv "X"  #'+org-capture/open
         :desc "kill-ring"               :nv "y"  #'counsel-yank-pop
 
         ;; Most commonly used
         :desc "Find file in project"    :n "SPC" #'projectile-find-file
         :desc "Toggle Buffers"          :n "TAB" #'switch-to-previous-buffer
-        :desc "Switch workspace buffer" :n ","   #'persp-switch-to-buffer
         :desc "Switch buffer"           :n "<"   #'switch-to-buffer
-        :desc "Browse files"            :n "."   #'find-file
-        :desc "Toggle last popup"       :n "~"   #'doom/popup-toggle
         :desc "Eval expression"         :n "`"   #'eval-expression
-        :desc "Blink cursor line"       :n "DEL" #'+doom/blink-cursor
         :desc "Jump to bookmark"        :n "RET" #'bookmark-jump
 
         ;; C-u is used by evil
@@ -230,6 +223,8 @@
           :desc "eshell"                :n  "e" #'eshell
           :desc "pass"                  :n  "p" #'pass
           :desc "weather"               :n  "w" #'wttrin
+          :desc "scratch buffer"        :n  "s"  #'doom/open-scratch-buffer
+          :desc "messages"              :n  "m"  #'+popup/toggle
 
           ;; applications
           :desc "APP: elfeed"           :n "E" #'=rss
@@ -545,7 +540,7 @@
       (:after neotree
         :map neotree-mode-map
         :n "g"         nil
-        :n [tab]       #'neotree-quick-look
+        :n "M-RET"     #'neotree-quick-look
         :n "RET"       #'neotree-enter
         :n [backspace] #'evil-window-prev
         :n "c"         #'neotree-create-node
@@ -583,11 +578,6 @@
 
       ;; rotate-text
       :n  "!"  #'rotate-text
-
-      ;; smart-forward
-      :nv "K"  #'smart-up
-      :m  "g]" #'smart-forward
-      :m  "g[" #'smart-backward
 
       ;; undo-tree -- undo/redo for visual regions
       :v "C-u" #'undo-tree-undo
