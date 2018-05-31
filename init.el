@@ -20,10 +20,11 @@
        (company          ; the ultimate code completion backend
         +auto            ; as-you-type code completion
         +childframe)     ; a nicer company UI. Emacs +26 only!
-      ;helm              ; the *other* search engine for love and life
+       (helm             ; the *other* search engine for love and life
+        +childfame)
       ;ido               ; the other *other* search engine...
-       (ivy               ; a search engine for love and life
-        +childframe)      ; uses childframes for popups (Emacs 26+ only)
+       ;; (ivy               ; a search engine for love and life
+        ;; +childframe)      ; uses childframes for popups (Emacs 26+ only)
 
        :ui
        (popup            ; tame sudden yet inevitable temporary windows

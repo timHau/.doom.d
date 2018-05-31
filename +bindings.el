@@ -99,7 +99,7 @@
 
         (:desc "search" :prefix "s"
           :desc "buffer"                :nv "s" #'swiper
-          :desc "project"               :nv "a" #'+ivy:ag
+          :desc "project"               :nv "a" #'helm-do-ag-project-root
           :desc "Imenu"                 :nv "i" #'imenu
           :desc "Imenu across buffers"  :nv "I" #'imenu-anywhere
           :desc "Online providers"      :nv "o" #'+jump/online-select)
