@@ -1,7 +1,5 @@
 ;;; private/default/+bindings.el -*- lexical-binding: t; -*-
 
-;; This files defines a Spacemacs-esque keybinding scheme
-;;
 (defun switch-to-previous-buffer ()
   (interactive)
   (switch-to-buffer (other-buffer (current-buffer) 1)))
@@ -231,6 +229,7 @@
           :desc "Terminal"              :n  "t" #'+term/open-popup
           :desc "eshell"                :n  "e" #'eshell
           :desc "pass"                  :n  "p" #'pass
+          :desc "weather"               :n  "w" #'wttrin
 
           ;; applications
           :desc "APP: elfeed"           :n "E" #'=rss

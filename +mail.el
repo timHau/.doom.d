@@ -1,6 +1,9 @@
 ;;; +mail.el --- description -*- lexical-binding: t; -*-
 
 (require 'smtpmail)
+
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu/mu4e")
+
 (set! :email "tim.hau@hotmail.de"
   '((mu4e-sent-folder       . "/hotmail/Sent")
     (mu4e-drafts-folder     . "/hotmail/Drafts")
@@ -14,8 +17,8 @@
     (smtpmail-smtp-user     . "tim.hau@hotmail.de")
     (smtpmail-smtp-service  . 587))
   t)
-;; (use-package mu4e
-  ;; :config (setq mu4e-get-mail-command "offlineimap"))
+ (use-package mu4e
+   :config (setq mu4e-get-mail-command "offlineimap"))
 
 
 (provide '+mail)

@@ -7,3 +7,4 @@
            :files ("*")))
 
 (package! sage-shell-mode)
+(package! wrrtin)
