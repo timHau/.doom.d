@@ -47,14 +47,19 @@
      ((modeline . nil) (select . t) (quit . t)))
   '("repl\\*$"
     ()
+    ((quit . nil)))
+  '("Sage\\*$"
+    ()
     ((quit . nil))))
+
+(after! magit
+  (set! :popup "magit"
+    '((side . right) (size . 0.4))))
+
 
 ;; change color of cursor
 (setq evil-normal-state-cursor '("yellow1" . 'box)
       evil-insert-state-cursor '("#00ff00" . 'bar))
-
-;; turn of blinking
-(add-hook 'doom-init-ui-hook (blink-cursor-mode -1))
 
 (after! neotree
   (setq neo-window-width 30
