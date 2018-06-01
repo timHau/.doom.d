@@ -49,6 +49,13 @@
     ()
     ((quit . nil))))
 
+;; change color of cursor
+(setq evil-normal-state-cursor '("yellow1" . 'box)
+      evil-insert-state-cursor '("#00ff00" . 'bar))
+
+;; turn of blinking
+(add-hook 'doom-init-ui-hook (blink-cursor-mode -1))
+
 (after! neotree
   (setq neo-window-width 30
         show-hidden-files t))
