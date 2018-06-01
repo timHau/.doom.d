@@ -46,16 +46,16 @@
        :tools
        editorconfig      ; let someone else argue about tabs vs spaces
        ein               ; tame Jupyter notebooks with emacs
-       gist              ; interacting with github gists
+       ;; gist              ; interacting with github gists
        macos             ; MacOS-specific commands
-       make              ; run make tasks from Emacs
+       ;; make              ; run make tasks from Emacs
        magit             ;
        password-store    ; password manager for nerds
        pdf               ; pdf enhancements
        rgb               ; creating color strings
        rotate-text       ; cycle region at point between text candidates
        tmux              ; an API for interacting with tmux
-       upload            ; map local to remote projects via ssh/ftp
+       ;; upload            ; map local to remote projects via ssh/ftp
 
        :emacs
        dired             ; making dired pretty [functional]
@@ -67,20 +67,20 @@
 
        :lang
        ;; assembly          ; assembly for fun or debugging
-       cc                ; C/C++/Obj-C madness
+       ;; cc                ; C/C++/Obj-C madness
        ;; crystal           ; ruby at the speed of c
        clojure           ; java with a lisp
-       csharp            ; unity, .NET, and mono shenanigans
+       ;; csharp            ; unity, .NET, and mono shenanigans
        data              ; config/data formats
-       erlang            ; an elegant language for a more civilized age
+       ;; erlang            ; an elegant language for a more civilized age
        ;; elixir            ; erlang done right
        ;; elm               ; care for a cup of TEA?
        emacs-lisp        ; drown in parentheses
        ;; ess               ; emacs speaks statistics
-       go                ; the hipster dialect
+       ;; go                ; the hipster dialect
        (haskell +intero) ; a language that's lazier than I am
        ;; hy                ; readability of scheme w/ speed of python
-       (java +meghanada) ; the poster child for carpal tunnel syndrome
+       ;; (java +meghanada) ; the poster child for carpal tunnel syndrome
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
        ;; julia             ; a better, faster MATLAB
        latex             ; writing papers in Emacs has never been so fun
@@ -88,7 +88,7 @@
        ;; lua               ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore
        ;; nix               ; I hereby declare "nix geht mehr!"
-       ocaml             ; an objective camel
+       ;; ocaml             ; an objective camel
        (org              ; organize your plain life in plain text
         +attach          ; custom attachment system
         +babel           ; running code in org

@@ -65,5 +65,5 @@
   (setq neo-window-width 30
         show-hidden-files t))
 
-(provide '+ui)
-;;; +ui.el ends here
+(after! highlight-indentation-mode
+  (set-face-background 'highlight-indentation-face "#e3e3d3"))

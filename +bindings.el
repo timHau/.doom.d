@@ -1,5 +1,12 @@
 ;;; private/default/+bindings.el -*- lexical-binding: t; -*-
 
+(defun newline-without-break-of-line ()
+  (interactive)
+  (let ((oldpos (point)))
+    (beginning-of-line)
+    (doom*newline-and-indent 3)
+    (previous-line)))
+
 (defun switch-to-previous-buffer ()
   (interactive)
   (switch-to-buffer (other-buffer (current-buffer) 1)))
@@ -57,6 +64,7 @@
       "M-Z"       #'undo-tree-redo
       :v "V"      #'evil-visual-line
       :i "C-t"    #'transpose-chars
+      :i "C-o"    #'newline-without-break-of-line
 
       ;; Other sensible, textmate-esque global bindings
       :ne "M-r"   #'+eval/buffer

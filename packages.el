@@ -8,3 +8,4 @@
 
 (package! sage-shell-mode)
 (package! wttrin)
+(package! swiper)

@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: new component 
+# key: react!
+# --
+import React, { Component } from 'react'
+
+export default class $0 extends Component {
+  render() {
+    return (
+      $1
+    )
+  }
