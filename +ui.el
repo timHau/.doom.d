@@ -40,11 +40,18 @@
     (set-char-table-range composition-function-table (car char-regexp)
                           `([,(cdr char-regexp) 0 font-shape-gstring]))))
 
+;; customize popups
+(set! :popups
+  '("^\\*Customize"
+    ((slot . 2) (side . right) (size . 0.4))
+     ((modeline . nil) (select . t) (quit . t)))
+  '("repl\\*$"
+    ()
+    ((quit . nil))))
 
 (after! neotree
   (setq neo-window-width 30
         show-hidden-files t))
-
 
 (provide '+ui)
 ;;; +ui.el ends here

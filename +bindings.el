@@ -84,7 +84,8 @@
         :desc "Ex command"              :nv ";"  #'evil-ex
         :desc "M-x"                     :nv ":"  #'execute-extended-command
         :desc "Org Capture"             :nv "X"  #'+org-capture/open
-        :desc "kill-ring"               :nv "y"  #'counsel-yank-pop
+        ;; :desc "kill-ring"               :nv "y"  #'counsel-yank-pop
+        :desc "kill-ring"               :nv "y"  #'helm-show-kill-ring
 
         ;; Most commonly used
         :desc "Find file in project"    :n "SPC" #'projectile-find-file
