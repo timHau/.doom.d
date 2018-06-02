@@ -43,7 +43,6 @@
       "M-W"       #'+workspace/close-workspace-or-frame
       "M-n"       #'evil-buffer-new
       "M-N"       #'make-frame
-      "M-1"       #'neotree-toggle
       "A-l"       #'forward-word
       "A-h"       #'backward-word
       :i "M-x"    #'kill-region
@@ -238,7 +237,7 @@
           ;; applications
           :desc "APP: elfeed"           :n "E" #'=rss
           :desc "APP: email"            :n "M" #'=email
-          :desc "APP: irc"              :n "i" #'znc-erc
+          ;; :desc "APP: irc"              :n "i" #'znc-erc
           :desc "APP: regex"            :n "X" #'=regex
 
           ;; macos
