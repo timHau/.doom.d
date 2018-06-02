@@ -52,7 +52,7 @@
        macos             ; MacOS-specific commands
        ;; make              ; run make tasks from Emacs
        magit             ;
-       password-store    ; password manager for nerds
+      ;; password-store    ; password manager for nerds
        pdf               ; pdf enhancements
        rgb               ; creating color strings
        ;; tmux              ; an API for interacting with tmux
