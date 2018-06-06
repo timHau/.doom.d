@@ -8,6 +8,7 @@
 (load! "./+tools")
 
 (load! "./lang/web")
+(load! "./lang/commonlisp")
 
 
 ;;

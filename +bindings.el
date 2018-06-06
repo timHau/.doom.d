@@ -330,6 +330,7 @@
         "o"       #'doom/window-enlargen
         ;; Delete window
         "c"       #'+workspace/close-window-or-workspace
+        "d"       #'+workspace/close-window-or-workspace
         "C-C"     #'ace-delete-window)
 
       ;; --- Plugin bindings ------------------------------

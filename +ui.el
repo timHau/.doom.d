@@ -11,7 +11,8 @@
 (defconst lisp--prettify-symbols-alist
   '(("lambda"  . ?λ)))
 
-(let ((alist '((33 . ".\\(?:\\(?:==\\|!!\\)\\|[!=]\\)")
+(let ((alist '(
+               (33 . ".\\(?:\\(?:==\\|!!\\)\\|[!=]\\)")
                (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
                (36 . ".\\(?:>\\)")
                (37 . ".\\(?:\\(?:%%\\)\\|%\\)")
@@ -45,6 +46,9 @@
   '("^\\*Customize"
     ((slot . 2) (side . right) (size . 0.4))
      ((modeline . nil) (select . t) (quit . t)))
+  '("\\*inferior-repl\\*"
+    ()
+    ((quit . nil)))
   '("repl\\*$"
     ()
     ((quit . nil)))
@@ -52,9 +56,9 @@
     ()
     ((quit . nil))))
 
-(after! magit
-  (set! :popup "magit"
-    '((side . right) (size . 0.4))))
+;; (after! magit
+;;   (set! :popup "magit"
+;;     '((side . right) (size . 0.4))))
 
 
 ;; change color of cursor
