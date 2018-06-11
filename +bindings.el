@@ -272,6 +272,9 @@
           :desc "Browse remote files"    :n "." #'+upload/browse
           :desc "Detect remote changes"  :n ">" #'+upload/check-remote)
 
+        (:desc "zoom" :prefix "z"
+          :desc "font"                   :nv "f" #'doom@text-zoom/text-scale-increase)
+
         (:desc "toggle" :prefix "t"
           :desc "Flyspell"               :n "s" #'flyspell-mode
           :desc "Flycheck"               :n "f" #'flycheck-mode

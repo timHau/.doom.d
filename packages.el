@@ -9,3 +9,4 @@
 (package! sage-shell-mode)
 (package! wttrin)
 (package! swiper)
+(package! glsl-mode)

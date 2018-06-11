@@ -9,6 +9,5 @@
                 js-indent-level 2))
 
 (after! css
-  (setq css-indent-offset 2
-        flycheck-disabled-checkers '(scss-stylelint sass/scss-sass-lint scss-lint scss)))
+  (flycheck-mode -1))
 
