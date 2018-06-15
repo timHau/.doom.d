@@ -6,6 +6,7 @@
 (load! "./+evil-commands")
 (load! "./+macos")
 (load! "./+tools")
+(load! "./+org")
 
 (load! "./lang/web")
 (load! "./lang/commonlisp")

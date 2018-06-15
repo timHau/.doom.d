@@ -42,19 +42,19 @@
                           `([,(cdr char-regexp) 0 font-shape-gstring]))))
 
 ;; customize popups
-(set! :popups
-  '("^\\*Customize"
-    ((slot . 2) (side . right) (size . 0.4))
-     ((modeline . nil) (select . t) (quit . t)))
-  '("\\*inferior-repl\\*"
-    ()
-    ((quit . nil)))
-  '("repl\\*$"
-    ()
-    ((quit . nil)))
-  '("Sage\\*$"
-    ()
-    ((quit . nil))))
+;; (set! :popups
+  ;; '("^\\*Customize"
+    ;; ((slot . 2) (side . right) (size . 0.4))
+     ;; ((modeline . nil) (select . t) (quit . t)))
+  ;; '("\\*inferior-repl\\*"
+    ;; ()
+    ;; ((quit . nil)))
+  ;; '("repl\\*$"
+    ;; ()
+    ;; ((quit . nil)))
+  ;; '("Sage\\*$"
+    ;; ()
+    ;; ((quit . nil))))
 
 ;; (after! magit
 ;;   (set! :popup "magit"
