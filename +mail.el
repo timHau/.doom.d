@@ -4,7 +4,7 @@
 
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu/mu4e")
 
-(set! :email "tim.hau@hotmail.de"
+(set-email-account! "tim.hau@hotmail.de"
   '((mu4e-sent-folder       . "/hotmail/Sent")
     (mu4e-drafts-folder     . "/hotmail/Drafts")
     (mu4e-trash-folder      . "/hotmail/Deleted")
