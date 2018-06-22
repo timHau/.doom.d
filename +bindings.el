@@ -90,7 +90,7 @@
       (:leader
         :desc "Ex command"              :nv ";"  #'evil-ex
         :desc "M-x"                     :nv ":"  #'execute-extended-command
-        :desc "Org Capture"             :nv "X"  #'+org-capture/open
+        :desc "Org Capture"             :nv "X"  #'org-capture
         ;; :desc "kill-ring"               :nv "y"  #'counsel-yank-pop
         :desc "kill-ring"               :nv "y"  #'helm-show-kill-ring
 
