@@ -42,23 +42,11 @@
                           `([,(cdr char-regexp) 0 font-shape-gstring]))))
 
 ;; customize popups
-;; (set! :popups
-  ;; '("^\\*Customize"
-    ;; ((slot . 2) (side . right) (size . 0.4))
-     ;; ((modeline . nil) (select . t) (quit . t)))
-  ;; '("\\*inferior-repl\\*"
-    ;; ()
-    ;; ((quit . nil)))
-  ;; '("repl\\*$"
-    ;; ()
-    ;; ((quit . nil)))
-  ;; '("Sage\\*$"
-    ;; ()
-    ;; ((quit . nil))))
-
-;; (after! magit
-;;   (set! :popup "magit"
-;;     '((side . right) (size . 0.4))))
+;; TODO should be set-popup-rules
+(set-popup-rule! "\\*Customize" :side 'right :width 0.4 :quit nil)
+(set-popup-rule! "Sage\\*$" :quit nil)
+(set-popup-rule! "\\*haskell\\*" :quit nil)
+(set-popup-rule! "\\*mu4e" :side 'right :width 0.5)
 
 
 ;; change color of cursor

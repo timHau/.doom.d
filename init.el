@@ -13,7 +13,6 @@
        spellcheck        ; tasing you for misspelling mispelling
        (syntax-checker   ; tasing you for every semicolon you forget
         +childframe)     ; use childframes for error popups (Emacs 26+ only)
-       version-control   ; remember, remember that commit in November
        workspaces        ; tab emulation, persistence & separate workspaces
 
        :completion
@@ -23,11 +22,12 @@
        (helm             ; the *other* search engine for love and life
         +fuzzy
         +childframe)
-      ;ido               ; the other *other* search engine...
+                                        ;ido               ; the other *other* search engine...
        ;; (ivy               ; a search engine for love and life
-        ;; +childframe)      ; uses childframes for popups (Emacs 26+ only)
+       ;; +childframe)      ; uses childframes for popups (Emacs 26+ only)
 
        :ui
+       vc-gutter
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
         +defaults)       ; default popup rules
@@ -38,7 +38,7 @@
        evil-goggles      ; display visual hints when editing in evil
        hl-todo           ; highlight TODO/FIXME/NOTE tags
        nav-flash         ; blink the current line after jumping
-      ;tabbar            ; FIXME an (incomplete) tab bar for Emacs
+                                        ;tabbar            ; FIXME an (incomplete) tab bar for Emacs
        unicode           ; extended unicode support for various languages
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        window-select     ; visually switch windows
@@ -55,17 +55,20 @@
        password-store    ; password manager for nerds
        pdf               ; pdf enhancements
        rgb               ; creating color strings
-       rotate-text       ; cycle region at point between text candidates
        ;; tmux              ; an API for interacting with tmux
        ;; upload            ; map local to remote projects via ssh/ftp
 
        :emacs
+       vc                ; remember, remember that commit in November
        dired             ; making dired pretty [functional]
        ediff             ; comparing files in Emacs
        electric          ; smarter, keyword-based electric-indent
        eshell            ; a consistent, cross-platform shell (WIP)
        imenu             ; an imenu sidebar and searchable code index
        term              ; terminals in Emacs
+
+       :editor
+       rotate-text       ; cycle region at point between text candidates
 
        :lang
        ;; assembly          ; assembly for fun or debugging
@@ -116,13 +119,13 @@
        ;; toward a specific purpose. They may have additional dependencies and
        ;; should be loaded late.
        :app
-      email              ; emacs as an email client
-      ;irc               ; how neckbeards socialize
-      ;(rss +org)        ; emacs as an RSS reader
-      ;twitter           ; twitter client https://twitter.com/vnought
-      ;(write            ; emacs as a word processor (latex + org + markdown)
-      ; +wordnut         ; wordnet (wn) search
-      ; +langtool)       ; a proofreader (grammar/style check) for Emacs
+       email              ; emacs as an email client
+                                        ;irc               ; how neckbeards socialize
+                                        ;(rss +org)        ; emacs as an RSS reader
+                                        ;twitter           ; twitter client https://twitter.com/vnought
+                                        ;(write            ; emacs as a word processor (latex + org + markdown)
+                                        ; +wordnut         ; wordnet (wn) search
+                                        ; +langtool)       ; a proofreader (grammar/style check) for Emacs
 
        :config
        ;; The default module set reasonable defaults for Emacs. It also provides

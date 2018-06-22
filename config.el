@@ -10,6 +10,7 @@
 
 (load! "./lang/web")
 (load! "./lang/commonlisp")
+(load! "./lang/racket")
 
 
 ;;
