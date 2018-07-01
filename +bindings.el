@@ -127,6 +127,7 @@
           :desc "Switch workspace"         :n "."   #'+workspace/switch-to
           :desc "Kill all buffers"         :n "x"   #'doom/kill-all-buffers
           :desc "Delete session"           :n "X"   #'+workspace/kill-session
+          :desc "rename"                   :n "r"   #'+workspace/rename
           :desc "Delete this workspace"    :n "d"   #'+workspace/delete
           :desc "Load session"             :n "L"   #'+workspace/load-session
           :desc "Next workspace"           :n "]"   #'+workspace/switch-right
@@ -273,7 +274,7 @@
           :desc "Detect remote changes"  :n ">" #'+upload/check-remote)
 
         (:desc "zoom" :prefix "z"
-          :desc "font"                   :nv "f" #'doom@text-zoom/text-scale-increase)
+          :desc "font"                   :nv "f" #'doom-text-zoom-hydra/body)
 
         (:desc "toggle" :prefix "t"
           :desc "Flyspell"               :n "s" #'flyspell-mode

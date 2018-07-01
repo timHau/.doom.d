@@ -47,7 +47,7 @@
 (set-popup-rule! "Sage\\*$" :quit nil)
 (set-popup-rule! "\\*haskell\\*" :quit nil)
 (set-popup-rule! "\\*mu4e" :side 'right :width 0.5)
-
+(set-popup-rule! "\\*eshell" :quit nil)
 
 ;; change color of cursor
 (setq evil-normal-state-cursor '("yellow1" . 'box)

@@ -1,5 +1,4 @@
 ;;; init.el -*- lexical-binding: t; -*-
-;; Copy me to ~/.doom.d/init.el or ~/.config/doom/init.el, then edit me!
 
 (doom! :feature
        debugger          ; FIXME stepping through code, to help you add bugs
@@ -22,11 +21,12 @@
        (helm             ; the *other* search engine for love and life
         +fuzzy
         +childframe)
-                                        ;ido               ; the other *other* search engine...
        ;; (ivy               ; a search engine for love and life
        ;; +childframe)      ; uses childframes for popups (Emacs 26+ only)
+       ;; ido               ; the other *other* search engine...
 
        :ui
+       ;; pretty-code
        vc-gutter
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
@@ -34,11 +34,11 @@
        doom              ; what makes DOOM look the way it does
        doom-dashboard    ; a nifty splash screen for Emacs
        doom-modeline     ; a snazzy Atom-inspired mode-line
-       doom-quit         ; DOOM quit-message prompts when you quit Emacs
+       ;; doom-quit         ; DOOM quit-message prompts when you quit Emacs
        evil-goggles      ; display visual hints when editing in evil
        hl-todo           ; highlight TODO/FIXME/NOTE tags
        nav-flash         ; blink the current line after jumping
-                                        ;tabbar            ; FIXME an (incomplete) tab bar for Emacs
+      ;tabbar            ; FIXME an (incomplete) tab bar for Emacs
        unicode           ; extended unicode support for various languages
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        window-select     ; visually switch windows
