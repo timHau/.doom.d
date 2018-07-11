@@ -26,7 +26,7 @@
        ;; ido               ; the other *other* search engine...
 
        :ui
-       ;; pretty-code
+       ;; (pretty-code +fira)
        vc-gutter
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
@@ -42,8 +42,8 @@
        unicode           ; extended unicode support for various languages
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        window-select     ; visually switch windows
-       neotree           ; a project drawer, like NERDTree for vim
-       ;; treemacs          ; a project drawer, like neotree but cooler
+       ;; neotree           ; a project drawer, like NERDTree for vim
+       treemacs          ; a project drawer, like neotree but cooler
 
        :tools
        editorconfig      ; let someone else argue about tabs vs spaces

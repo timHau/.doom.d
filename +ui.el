@@ -37,15 +37,16 @@
                )
              ))
 
-  (dolist (char-regexp alist)
-    (set-char-table-range composition-function-table (car char-regexp)
-                          `([,(cdr char-regexp) 0 font-shape-gstring]))))
+ (dolist (char-regexp alist)
+   (set-char-table-range composition-function-table (car char-regexp)
+                         `([,(cdr char-regexp) 0 font-shape-gstring]))))
 
 ;; customize popups
 ;; TODO should be set-popup-rules
 (set-popup-rule! "\\*Customize" :side 'right :width 0.4 :quit nil)
 (set-popup-rule! "Sage\\*$" :quit nil)
 (set-popup-rule! "\\*haskell\\*" :quit nil)
+(set-popup-rule! "\\*intero" :quit nil)
 (set-popup-rule! "\\*mu4e" :side 'right :width 0.5)
 (set-popup-rule! "\\*eshell" :quit nil)
 
