@@ -2,7 +2,7 @@
 
 (load! "./+bindings")
 (load! "./+ui")
-;; (load! "./+mail")
+(load! "./+mail")
 (load! "./+evil-commands")
 (load! "./+macos")
 (load! "./+tools")
