@@ -10,3 +10,4 @@ export default class $0 extends Component {
       $1
     )
   }
+}

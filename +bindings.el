@@ -48,6 +48,8 @@
       :i "M-x"    #'kill-region
 
       ;; general stuff
+      :n "A-i"    #'evil-scroll-line-up
+      :n "A-o"    #'evil-scroll-line-down
       "C--"       #'comment-line
       "A-t"       #'transpose-words
       "C-#"       #'kill-this-buffer
@@ -611,7 +613,6 @@
           :i "<tab>" yas-maybe-expand
           :v "<tab>" #'+snippets/expand-on-region))
 
-
       ;; --- Major mode bindings --------------------------
       (:after markdown-mode
         (:map markdown-mode-map
@@ -713,8 +714,6 @@
         (:map sage-shell-mode-map
         "C-p" #'previous-buffer
         "C-k" #'widget-kill-line))
-
-
 
       ;; Restore common editing keys (and ESC) in minibuffer
       (:map (minibuffer-local-map

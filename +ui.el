@@ -1,11 +1,14 @@
 ;;; +ui.el --- description -*- lexical-binding: t; -*-
 
+(load! "./themes/mono-theme")
+
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
 
 (setq
  doom-font (font-spec :family "Fira Code" :size 9)
  ;; doom-theme 'doom-tomorrow-day
+ doom-theme 'mono
  +doom-modeline-height 22)
 
 ;; fancy symbols
