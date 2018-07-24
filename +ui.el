@@ -55,7 +55,7 @@
 (set-popup-rule! "\\*eshell" :quit nil)
 
 ;; change color of cursor
-(setq evil-normal-state-cursor '("yellow1" . 'box)
+(setq evil-normal-state-cursor '("DeepSkyBlue1" . 'box)
       evil-insert-state-cursor '("#00ff00" . 'bar))
 
 (after! neotree

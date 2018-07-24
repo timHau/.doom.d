@@ -47,7 +47,7 @@ determine the exact padding."
    (fg-alt     '("#5B6268" "#2d2d2d" "white"        ))
 
    (grey       base4)
-   (red        '("#d32e5a" "#d32e5a" "red"          ))
+   (red        '("#f4785d" "#f4785d" "red"          ))
    (orange     '("#e2f9d9" "#dd8844" "brightred"    ))
    (green      '("#98be65" "#99bb66" "green"        ))
    (teal       '("#4db5bd" "#44b9b1" "brightgreen"  ))
