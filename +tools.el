@@ -31,8 +31,8 @@
         epa-pinentry-mode 'loopback))
 
 ;; dont use yas default snippets
-(after! yasnippet
-  (setq yas-snippet-dirs '("~/.doom.d/snippets")))
+;; (after! yasnippet
+  ;; (setq yas-snippet-dirs '("~/.doom.d/snippets")))
 
 
 ;; eshell

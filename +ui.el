@@ -6,7 +6,7 @@
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
 
 (setq
- doom-font (font-spec :family "Menlo" :size 9)
+ doom-font (font-spec :family "Fira Code" :size 9)
  doom-theme 'mono
  +doom-modeline-height 18)
 

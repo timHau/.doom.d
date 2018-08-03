@@ -22,7 +22,7 @@
         +fuzzy
        )
        ;; +childframe)
-       ;; (ivy               ; a search engine for love and life
+       ;;(ivy               ; a search engine for love and life
        ;; +childframe)      ; uses childframes for popups (Emacs 26+ only)
        ;; ido               ; the other *other* search engine...
 
@@ -34,7 +34,8 @@
         +defaults)       ; default popup rules
        doom              ; what makes DOOM look the way it does
        doom-dashboard    ; a nifty splash screen for Emacs
-       (doom-modeline +new)     ; a snazzy Atom-inspired mode-line
+       ;; doom-modeline     ; a snazzy Atom-inspired mode-line
+       modeline          ; a snazzy Atom-inspired mode-line but new
        ;; doom-quit         ; DOOM quit-message prompts when you quit Emacs
        evil-goggles      ; display visual hints when editing in evil
        hl-todo           ; highlight TODO/FIXME/NOTE tags
