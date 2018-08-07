@@ -8,9 +8,11 @@
 (setq
  doom-font (font-spec :family "Fira Code" :size 9)
  doom-theme 'mono
- +doom-modeline-height 18)
+ +doom-modeline-height 10)
 
-(setq helm-display-buffer-default-height 17)
+(after! helm-mode
+  (setq +helm-posframe-text-scale -1
+        +helm-global-prompt "➜  "))
 
 ;; fancy symbols
 (defconst lisp--prettify-symbols-alist
@@ -57,10 +59,6 @@
 ;; change color of cursor
 (setq evil-normal-state-cursor '("DeepSkyBlue1" . 'box)
       evil-insert-state-cursor '("#00ff00" . 'bar))
-
-(after! neotree
-  (setq neo-window-width 30
-        show-hidden-files t))
 
 (after! highlight-indentation-mode
   (set-face-background 'highlight-indentation-face "#e3e3d3"))

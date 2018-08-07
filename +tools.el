@@ -14,9 +14,6 @@
   :init (setq wttrin-default-cities '("Frankfurt am Main")
               wttrin-default-accept-language '("Accept-Language" . "de-DE,de;q=0.9,en;q=0.8,en-US;q=0.7,fr;q=0.6")))
 
-(after! helm
-  :config (setq +helm-global-prompt "➜  "))
-
 ;; smartparens
 (setq sp-autowrap-region t
       sp-max-pair-length 2)
