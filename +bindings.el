@@ -258,7 +258,6 @@
           :desc "Run cmd in project root" :nv "!" #'projectile-run-shell-command-in-root
           :desc "Switch project"          :n  "p" #'projectile-switch-project
           :desc "Recent project files"    :n  "r" #'projectile-recentf
-          :desc "List project tasks"      :n  "t" #'+ivy/tasks
           :desc "Pop term in project"     :n  "o" #'+term/open-popup-in-project
           :desc "Invalidate cache"        :n  "x" #'projectile-invalidate-cache)
 
@@ -378,16 +377,6 @@
           "C-p"        #'company-search-repeat-backward
           "C-s"        (λ! (company-search-abort) (company-filter-candidates))
           [escape]     #'company-search-abort))
-
-      ;; counsel
-      (:after counsel
-        (:map counsel-find-file-map
-          "M-e"      #'ivy-alt-done
-          "M-f"      #'ivy-backward-delete-char)
-        (:map counsel-ag-map
-          "C-e"      #'+ivy/wgrep-occur      ; search/replace on results
-          [tab]      #'ivy-call-and-recenter ; preview
-          "M-RET"    (+ivy-do-action! #'+ivy-git-grep-other-window-action)))
 
       ;; evil-commentary
       :n  "gc"  #'evil-commentary
@@ -539,18 +528,6 @@
       :m  "]t" #'hl-todo-next
       :m  "[t" #'hl-todo-previous
 
-      ;; ivy
-      (:after ivy
-        (:map ivy-minibuffer-map
-          [escape] #'keyboard-escape-quit
-          "C-SPC" #'ivy-call-and-recenter
-          "M-v" #'yank
-          "M-z" #'undo
-          "C-r" #'evil-paste-from-register
-          "C-u" #'ivy-kill-line
-          "A-b" #'backward-word
-          "A-f" #'forward-word))
-
       ;; neotree
       (:after neotree
         :map neotree-mode-map
@@ -652,8 +629,7 @@
         :n "[["  #'help-go-back
         :n "]]"  #'help-go-forward
         :n "o"   #'ace-link-help
-        :n "q"   #'quit-window
-        :n "Q"   #'+ivy-quit-and-resume)
+        :n "q"   #'quit-window)
 
       (:after vc-annotate
         :map vc-annotate-mode-map
