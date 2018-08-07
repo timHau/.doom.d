@@ -10,9 +10,14 @@
  doom-theme 'mono
  +doom-modeline-height 10)
 
+;; (after! helm-mode
+  ;; (setq +helm-posframe-text-scale -1
+        ;; ))
+
+;; without childframe
 (after! helm-mode
-  (setq +helm-posframe-text-scale -1
-        +helm-global-prompt "➜  "))
+  (setq +helm-global-prompt "➜  "
+        helm-display-buffer-default-height 0.2))
 
 ;; fancy symbols
 (defconst lisp--prettify-symbols-alist
