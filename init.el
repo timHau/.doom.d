@@ -54,22 +54,22 @@
        ;; make              ; run make tasks from Emacs
        magit             ;
        password-store    ; password manager for nerds
-       pdf               ; pdf enhancements
+       ;; pdf               ; pdf enhancements
        rgb               ; creating color strings
        ;; tmux              ; an API for interacting with tmux
        ;; upload            ; map local to remote projects via ssh/ftp
 
        :emacs
-       vc                ; remember, remember that commit in November
+       ;; vc                ; remember, remember that commit in November
        dired             ; making dired pretty [functional]
        ediff             ; comparing files in Emacs
        electric          ; smarter, keyword-based electric-indent
        eshell            ; a consistent, cross-platform shell (WIP)
-       imenu             ; an imenu sidebar and searchable code index
+       ;; imenu             ; an imenu sidebar and searchable code index
        ;; term              ; terminals in Emacs
 
        :editor
-      ;; multiple-cursors  ; editing in many places at once
+       multiple-cursors  ; editing in many places at once
       ;parinfer          ; turn lisp into python, sort of
        rotate-text       ; cycle region at point between text candidates
 
@@ -109,7 +109,7 @@
        ;; php               ; perl's insecure younger brother
        ;; plantuml          ; diagrams for confusing people more
        ;; purescript        ; javascript, but functional
-       python            ; beautiful is better than ugly
+       ;; python            ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        ;; rest              ; Emacs as a REST client
@@ -126,7 +126,7 @@
        ;; toward a specific purpose. They may have additional dependencies and
        ;; should be loaded late.
        :app
-       email              ; emacs as an email client
+       ;; email              ; emacs as an email client
        ;irc               ; how neckbeards socialize
        ;(rss +org)        ; emacs as an RSS reader
        ;twitter           ; twitter client https://twitter.com/vnought

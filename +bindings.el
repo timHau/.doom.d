@@ -1,16 +1,5 @@
 ;;; private/default/+bindings.el -*- lexical-binding: t; -*-
 
-(defun newline-without-break-of-line ()
-  (interactive)
-  (let ((oldpos (point)))
-    (beginning-of-line)
-    (doom*newline-and-indent 3)
-    (previous-line)))
-
-(defun switch-to-previous-buffer ()
-  (interactive)
-  (switch-to-buffer (other-buffer (current-buffer) 1)))
-
 (map! [remap evil-jump-to-tag] #'projectile-find-tag
       [remap find-tag]         #'projectile-find-tag
 

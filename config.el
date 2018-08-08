@@ -2,37 +2,28 @@
 
 (load! "./+bindings")
 (load! "./+ui")
-(load! "./+mail")
+;; (load! "./+mail")
 (load! "./+evil-commands")
 (load! "./+macos")
 (load! "./+tools")
 (load! "./+org")
 
 (load! "./lang/web")
-;; (load! "./lang/commonlisp")
-;; (load! "./lang/racket")
-
-
-;;
-;; Plugins
-;;
-
-(def-package! emacs-snippets :after yasnippet)
 
 ;;
 ;; Config
 ;;
 
 
-;; Makes ; and , the universal repeat-keys in evil-mode
-(defmacro do-repeat! (command next-func prev-func)
-  "Repeat motions with ;/,"
-  (let ((fn-sym (intern (format "+evil*repeat-%s" command))))
-    `(progn
-       (defun ,fn-sym (&rest _)
-         (define-key evil-motion-state-map (kbd ";") ',next-func)
-         (define-key evil-motion-state-map (kbd ",") ',prev-func))
-       (advice-add #',command :before #',fn-sym))))
+;; ;; Makes ; and , the universal repeat-keys in evil-mode
+;; (defmacro do-repeat! (command next-func prev-func)
+;;   "Repeat motions with ;/,"
+;;   (let ((fn-sym (intern (format "+evil*repeat-%s" command))))
+;;     `(progn
+;;        (defun ,fn-sym (&rest _)
+;;          (define-key evil-motion-state-map (kbd ";") ',next-func)
+;;          (define-key evil-motion-state-map (kbd ",") ',prev-func))
+;;        (advice-add #',command :before #',fn-sym))))
 
 ;; n/N
 (do-repeat! evil-ex-search-next evil-ex-search-next evil-ex-search-previous)

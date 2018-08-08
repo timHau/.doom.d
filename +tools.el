@@ -18,19 +18,13 @@
 (setq sp-autowrap-region t
       sp-max-pair-length 2)
 
-;; (after! ivy-posframe
-;; (setq ivy-display-function #'ivy-posframe-display-at-point))
+(def-package! emacs-snippets :after yasnippet)
 
 (after! epa
   (setq epa-file-encrypt-to (or epa-file-encrypt-to user-mail-address)
         ;; With GPG 2.1, this forces gpg-agent to use the Emacs minibuffer to
         ;; prompt for the key passphrase.
         epa-pinentry-mode 'loopback))
-
-;; dont use yas default snippets
-;; (after! yasnippet
-  ;; (setq yas-snippet-dirs '("~/.doom.d/snippets")))
-
 
 ;; eshell
 (after! eshell

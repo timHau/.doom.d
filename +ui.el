@@ -8,7 +8,8 @@
 (setq
  doom-font (font-spec :family "Fira Code" :size 9)
  doom-theme 'mono
- +doom-modeline-height 10)
+ +modeline-width 4
+ +modeline-height 19)
 
 ;; (after! helm-mode
   ;; (setq +helm-posframe-text-scale -1
