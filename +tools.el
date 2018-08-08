@@ -15,8 +15,9 @@
               wttrin-default-accept-language '("Accept-Language" . "de-DE,de;q=0.9,en;q=0.8,en-US;q=0.7,fr;q=0.6")))
 
 ;; smartparens
-(setq sp-autowrap-region t
-      sp-max-pair-length 2)
+(after! smartparens
+  (setq sp-autowrap-region t
+        sp-max-pair-length 2))
 
 (def-package! emacs-snippets :after yasnippet)
 

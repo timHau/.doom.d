@@ -8,7 +8,6 @@
 
   ;;; Custom commands
 ;; Editing
-(ex! "@"            #'+evil:macro-on-all-lines)   ; TODO Test me
 (ex! "al[ign]"      #'+evil:align)
 (ex! "enhtml"       #'+web:encode-html-entities)
 (ex! "dehtml"       #'+web:decode-html-entities)
@@ -16,14 +15,9 @@
 (ex! "iedit"        #'evil-multiedit-ex-match)
 (ex! "na[rrow]"     #'+evil:narrow-buffer)
 (ex! "retab"        #'+evil:retab)
-;; External resources
-;; TODO (ex! "db"          #'doom:db)
-;; TODO (ex! "dbu[se]"     #'doom:db-select)
-;; TODO (ex! "go[ogle]"    #'doom:google-search)
 (ex! "lo[okup]"    #'+jump:online)
 (ex! "http"        #'httpd-start)            ; start http server
 (ex! "repl"        #'+eval:repl)             ; invoke or send to repl
-;; TODO (ex! "rx"          'doom:regex)             ; open re-builder
 (ex! "sh[ell]"     #'+eshell:run)
 (ex! "t[mux]"      #'+tmux:run)              ; send to tmux
 (ex! "tcd"         #'+tmux:cd-here)          ; cd to default-directory in tmux
