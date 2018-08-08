@@ -60,7 +60,7 @@
        ;; upload            ; map local to remote projects via ssh/ftp
 
        :emacs
-       ;; vc                ; remember, remember that commit in November
+       vc                ; remember, remember that commit in November
        dired             ; making dired pretty [functional]
        ediff             ; comparing files in Emacs
        electric          ; smarter, keyword-based electric-indent
