@@ -2,9 +2,6 @@
 
 (load! "./themes/mono-theme")
 
-(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
-(add-to-list 'default-frame-alist '(ns-appearance . dark))
-
 (setq
  doom-font (font-spec :family "Fira Code" :size 9)
  doom-theme 'mono
@@ -19,10 +16,6 @@
 (after! helm-mode
   (setq +helm-global-prompt "➜  "
         helm-display-buffer-default-height 0.2))
-
-;; fancy symbols
-(defconst lisp--prettify-symbols-alist
-  '(("lambda"  . ?λ)))
 
 ;; (let ((alist '(
 ;;                (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
@@ -54,13 +47,12 @@
                           ;; `([,(cdr char-regexp) 0 font-shape-gstring]))))
 
 ;; customize popups
-;; TODO should be set-popup-rules
-(set-popup-rule! "\\*Customize" :side 'right :width 0.4 :quit nil)
-(set-popup-rule! "Sage\\*$" :quit nil)
-(set-popup-rule! "\\*haskell\\*" :quit nil)
-(set-popup-rule! "\\*intero" :quit nil)
-(set-popup-rule! "\\*mu4e" :side 'right :width 0.5)
-(set-popup-rule! "\\*eshell" :quit nil)
+(set-popup-rules!
+  '(("\\*eshell" :quit nil)
+    ("\\*intero" :quit nil)
+    ("\\*haskell\\*" :quit nil)
+    ("Sage\\*$" :quit nil)
+    ("\\*Customize" :side right :quit nil :width 0.4)))
 
 ;; change color of cursor
 (setq evil-normal-state-cursor '("DeepSkyBlue1" . 'box)

@@ -4,3 +4,6 @@
 (setq mac-right-command-modifier 'control
       x-select-enable-clipboard t
       shift-select-mode t)
+
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+(add-to-list 'default-frame-alist '(ns-appearance . dark))
