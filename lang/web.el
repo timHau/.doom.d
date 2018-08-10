@@ -7,9 +7,3 @@
   (setq-default web-mode-indent-style 2
                 line-spacing 2
                 js-indent-level 2))
-
-(after! css-mode
-  (flycheck-mode -1))
-
-(after! scss-mode
-  (flycheck-mode -1))

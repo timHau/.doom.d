@@ -4,7 +4,7 @@
 
 (setq
  doom-font (font-spec :family "Fira Code" :size 9)
- doom-theme 'mono
+  doom-theme 'mono
  doom-line-numbers-style nil
  +modeline-width 4
  +modeline-height 15)

@@ -4,10 +4,10 @@
 # --
 import React, { Component } from 'react'
 
-export default class $0 extends Component {
+export default class $1 extends Component {
   render() {
     return (
-      $1
+      $2
     )
   }
 }
