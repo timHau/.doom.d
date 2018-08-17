@@ -13,7 +13,6 @@
 (use-package sage-shell-mode
   :config (sage-shell:define-alias))
 
-(global-whitespace-mode 1)
 ;; wttrin
 (after! wttrin
   :init (setq wttrin-default-cities '("Frankfurt am Main")
