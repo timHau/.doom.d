@@ -43,8 +43,8 @@
        unicode           ; extended unicode support for various languages
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        window-select     ; visually switch windows
-       ;; neotree           ; a project drawer, like NERDTree for vim
-       treemacs          ; a project drawer, like neotree but cooler
+       neotree           ; a project drawer, like NERDTree for vim
+       ;; treemacs          ; a project drawer, like neotree but cooler
 
        :tools
        editorconfig      ; let someone else argue about tabs vs spaces

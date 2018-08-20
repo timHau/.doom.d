@@ -218,7 +218,8 @@
           :desc "Debugger"              :n  "d" #'+debug/open
           :desc "REPL"                  :n  "r" #'+eval/open-repl
                                         :v  "r" #'+eval:repl
-          :desc "Treemacs"              :n  "t" #'+treemacs/toggle
+          ;; :desc "Treemacs"              :n  "t" #'+treemacs/toggle
+          :desc "Neotree"               :n  "n" #'neotree-toggle
           :desc "Terminal"              :n  "T" #'+term/open-popup
           :desc "eshell"                :n  "e" #'eshell
           :desc "pass"                  :n  "p" #'pass
