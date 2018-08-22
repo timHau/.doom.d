@@ -1,13 +1,14 @@
 ;;; ~/.doom.d/+tools.el -*- lexical-binding: t; -*-
 
 (after! company
-  (setq company-idle-delay 0.3
-        company-auto-complete-chars nil
-        company-show-numbers t
-        company-tooltip-minimum-width 50
-        company-tooltip-minimum-height 60
-        company-tooltip-limit 20
-        company-minimum-prefix-length 2))
+  (setq
+   company-idle-delay 0.3
+   company-auto-complete-chars nil
+   company-show-numbers t
+   company-tooltip-minimum-width 50
+   company-tooltip-minimum-height 60
+   company-tooltip-limit 22
+   company-minimum-prefix-length 2))
 
 ;; sage math
 (use-package sage-shell-mode
