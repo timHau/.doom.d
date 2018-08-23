@@ -64,11 +64,13 @@
        dired             ; making dired pretty [functional]
        ediff             ; comparing files in Emacs
        electric          ; smarter, keyword-based electric-indent
+       ;; hideshow
        eshell            ; a consistent, cross-platform shell (WIP)
        ;; imenu             ; an imenu sidebar and searchable code index
        ;; term              ; terminals in Emacs
 
        :editor
+       ;; format
        multiple-cursors  ; editing in many places at once
       ;parinfer          ; turn lisp into python, sort of
        rotate-text       ; cycle region at point between text candidates
@@ -126,6 +128,9 @@
        ;; toward a specific purpose. They may have additional dependencies and
        ;; should be loaded late.
        :app
+       ;; calendar
+       ;; notmuch
+       ;; regex
        ;; email              ; emacs as an email client
        ;irc               ; how neckbeards socialize
        ;(rss +org)        ; emacs as an RSS reader

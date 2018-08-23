@@ -201,7 +201,7 @@
           :desc "Find references"       :n  "/" #'+jump/references
           :desc "Find documentation"    :n  "h" #'+jump/documentation
           :desc "What face"             :n  "'" #'doom/what-face
-          :desc "What minor modes"      :n  ";" #'doom/what-minor-mode
+          :desc "active minor modes"    :n  ";" #'doom/describe-active-minor-mode
           :desc "Info"                  :n  "i" #'info
           :desc "Toggle profiler"       :n  "p" #'doom/toggle-profiler)
 
@@ -216,6 +216,7 @@
           :desc "agenda"                :n  "a" #'org-agenda
           :desc "Default browser"       :n  "b" #'browse-url-of-file
           :desc "Debugger"              :n  "d" #'+debug/open
+          :desc "Dired"                 :n  "d" #'dired-at-point
           :desc "REPL"                  :n  "r" #'+eval/open-repl
                                         :v  "r" #'+eval:repl
           ;; :desc "Treemacs"              :n  "t" #'+treemacs/toggle
