@@ -23,8 +23,7 @@
       "M--"       #'text-scale-decrease
 
       ;; Simple window navigation/manipulation
-      "C-`"       #'doom/popup-toggle
-      "C-~"       #'doom/popup-raise
+      "C-~"       #'+popup/raise
       "C-#"       #'kill-this-buffer
       "M-t"       #'+workspace/new
       "M-T"       #'+workspace/display
@@ -89,7 +88,6 @@
         :desc "Find file in project"    :n "SPC" #'projectile-find-file
         :desc "Toggle Buffers"          :n "TAB" #'switch-to-previous-buffer
         :desc "Switch buffer"           :n "<"   #'switch-to-buffer
-        :desc "Eval expression"         :n "`"   #'eval-expression
         :desc "Jump to bookmark"        :n "RET" #'bookmark-jump
 
         ;; C-u is used by evil
@@ -164,7 +162,7 @@
           :desc "Find other file"           :n "a" #'projectile-find-other-file
           :desc "Open project editorconfig" :n "c" #'editorconfig-find-current-editorconfig
           :desc "Find file in dotfiles"     :n "d" #'+default/find-in-dotfiles
-          :desc "Browse dotfiles"           :n "D" #'+default/browse-dotfiles
+          :desc "Browse dotfiles"           :n "D" #'+default/browse-config
           :desc "Find file in emacs.d"      :n "e" #'+default/find-in-emacsd
           :desc "Browse emacs.d"            :n "E" #'+default/browse-emacsd
           :desc "Recent files"              :n "r" #'recentf-open-files
@@ -197,9 +195,6 @@
           :desc "Describe face"         :n  "F" #'describe-face
           :desc "Describe DOOM setting" :n  "s" #'doom/describe-setting
           :desc "Describe DOOM module"  :n  "d" #'doom/describe-module
-          :desc "Find definition"       :n  "." #'+jump/definition
-          :desc "Find references"       :n  "/" #'+jump/references
-          :desc "Find documentation"    :n  "h" #'+jump/documentation
           :desc "What face"             :n  "'" #'doom/what-face
           :desc "active minor modes"    :n  ";" #'doom/describe-active-minor-mode
           :desc "Info"                  :n  "i" #'info
@@ -207,10 +202,7 @@
 
         (:desc "notes" :prefix "n"
           :desc "Find file in notes"    :n  "n" #'+default/find-in-notes
-          :desc "Browse notes"          :n  "N" #'+default/browse-notes
-          :desc "Org capture"           :n  "x" #'+org-capture/open
-          :desc "Browse mode notes"     :n  "m" #'+org/browse-notes-for-major-mode
-          :desc "Browse project notes"  :n  "p" #'+org/browse-notes-for-project)
+          :desc "Browse notes"          :n  "N" #'+default/browse-notes)
 
         (:desc "open" :prefix "o"
           :desc "agenda"                :n  "a" #'org-agenda
@@ -222,6 +214,7 @@
           ;; :desc "Treemacs"              :n  "t" #'+treemacs/toggle
           :desc "Neotree"               :n  "n" #'neotree-toggle
           :desc "Terminal"              :n  "T" #'+term/open-popup
+          :desc "Twitter"               :n  "t" #'twit
           :desc "eshell"                :n  "e" #'eshell
           :desc "pass"                  :n  "p" #'pass
           :desc "weather"               :n  "w" #'wttrin
@@ -249,7 +242,6 @@
           :desc "Run cmd in project root" :nv "!" #'projectile-run-shell-command-in-root
           :desc "Switch project"          :n  "p" #'projectile-switch-project
           :desc "Recent project files"    :n  "r" #'projectile-recentf
-          :desc "Pop term in project"     :n  "o" #'+term/open-popup-in-project
           :desc "Invalidate cache"        :n  "x" #'projectile-invalidate-cache)
 
         (:desc "quit" :prefix "q"
@@ -269,19 +261,17 @@
           :desc "Flyspell"               :n "s" #'flyspell-mode
           :desc "Flycheck"               :n "f" #'flycheck-mode
           :desc "Line numbers"           :n "l" #'doom/toggle-line-numbers
-          :desc "Fullscreen"             :n "f" #'doom/toggle-fullscreen
+          :desc "Fullscreen"             :n "f" #'toggle-frame-fullscreen
           :desc "Indent guides"          :n "i" #'highlight-indentation-mode
           :desc "Indent guides (column)" :n "I" #'highlight-indentation-current-column-mode
           :desc "Impatient mode"         :n "h" #'+impatient-mode/toggle
           :desc "Big mode"               :n "b" #'doom-big-font-mode
-          :desc "Evil goggles"           :n "g" #'+evil-goggles/toggle))
+          :desc "Whitespace"             :n "w" #'whitespace-mode))
 
 
       ;; --- Personal vim-esque bindings ------------------
-      :n  "zx" #'doom/kill-this-buffer
+      :n  "zx" #'doom/kill-this-buffer-in-all-windows
       :n  "ZX" #'bury-buffer
-      :n  "]b" #'doom/next-buffer
-      :n  "[b" #'doom/previous-buffer
       :n  "]w" #'+workspace/switch-right
       :n  "[w" #'+workspace/switch-left
       :m  "gt" #'+workspace/switch-right
@@ -320,7 +310,7 @@
         "u"       #'winner-undo
         "C-u"     #'winner-undo
         "C-r"     #'winner-redo
-        "o"       #'doom/window-enlargen
+        "e"       #'doom/window-enlargen
         ;; Delete window
         "c"       #'+workspace/close-window-or-workspace
         "d"       #'+workspace/close-window-or-workspace
@@ -519,7 +509,7 @@
       ;; neotree
       (:after neotree
         :map neotree-mode-map
-        :n "g"         nil
+        :n "g"         #'neotree-refresh
         :n "M-RET"     #'neotree-quick-look
         :n "RET"       #'neotree-enter
         :n [backspace] #'evil-window-prev
