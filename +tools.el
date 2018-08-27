@@ -12,7 +12,7 @@
    company-minimum-prefix-length 2))
 
 ;; sage math
-(use-package sage-shell-mode
+(def-package! sage-shell-mode
   :config (sage-shell:define-alias))
 
 ;; wttrin
@@ -45,3 +45,17 @@
    "gs"  "magit-status"
    "gc"  "magit-commit"
    "ag"  "ag --color=always $*"))
+
+(after! org
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((python . t)
+     ;; (shell . t)
+     ;; (ruby . t)
+     ;; (clojure . t)
+     (js . t)
+     (sql . t)
+     (haskell . t)))
+
+  (setq org-confirm-babel-evaluate nil))
+

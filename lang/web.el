@@ -6,4 +6,5 @@
         js2-missing-semi-one-line-override nil)
   (setq-default web-mode-indent-style 2
                 line-spacing 2
-                js-indent-level 2))
+                js-indent-level 2
+                flycheck-disabled-checkers (append flycheck-disabled-checkers '(javascript-jshint))))

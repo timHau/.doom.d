@@ -3,10 +3,7 @@
 (load! "./+bindings")
 (load! "./+ui")
 ;; (load! "./+mail")
-(load! "./+evil-commands")
-(load! "./+macos")
 (load! "./+tools")
-(load! "./+org")
 
 (load! "./lang/web")
 
@@ -14,6 +11,14 @@
 ;; Config
 ;;
 
+(setq-default mac-right-option-modifier nil)
+(setq mac-right-command-modifier 'control
+      x-select-enable-clipboard t
+      ns-function-modifier 'super
+      shift-select-mode t)
+
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+(add-to-list 'default-frame-alist '(ns-appearance . dark))
 
 ;; ;; Makes ; and , the universal repeat-keys in evil-mode
 (defmacro do-repeat! (command next-func prev-func)
