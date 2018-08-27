@@ -49,10 +49,14 @@
 
 (after! ivy-posframe
   (setq ivy-fixed-height-minibuffer nil
+;        ivy-display-function #'ivy-posframe-display-at-lower-center
         ivy-posframe-parameters
-        `((min-width . 120)
+        `((min-width . 140)
           (min-height . 17)
           (internal-border-width . 5))))
+
+(after! counsel-yank-pop
+  (setq counsel-yank-pop-separator "\n"))
 
 ;; customize popups
 (set-popup-rules!
