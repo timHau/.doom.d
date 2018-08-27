@@ -3,6 +3,7 @@
 (after! company
   (setq
    company-idle-delay 0.3
+   compony-show-numbers t
    company-auto-complete-chars nil
    company-show-numbers t
    company-tooltip-minimum-width 50

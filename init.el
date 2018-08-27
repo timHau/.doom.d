@@ -18,11 +18,12 @@
        (company          ; the ultimate code completion backend
         +auto            ; as-you-type code completion
         +childframe)     ; a nicer company UI. Emacs +26 only!
-       (helm             ; the *other* search engine for love and life
-        +fuzzy)
-        ;; +childframe)
-       ;;(ivy               ; a search engine for love and life
-       ;; +childframe)      ; uses childframes for popups (Emacs 26+ only)
+       ;; (helm             ; the *other* search engine for love and life
+       ;; +fuzzy
+       ;; +childframe)
+       (ivy               ; a search engine for love and life
+        +fuzzy
+        +childframe)      ; uses childframes for popups (Emacs 26+ only)
        ;; ido               ; the other *other* search engine...
 
        :ui
@@ -39,12 +40,12 @@
        evil-goggles      ; display visual hints when editing in evil
        hl-todo           ; highlight TODO/FIXME/NOTE tags
        nav-flash         ; blink the current line after jumping
-      ;tabbar            ; FIXME an (incomplete) tab bar for Emacs
+                                        ;tabbar            ; FIXME an (incomplete) tab bar for Emacs
        unicode           ; extended unicode support for various languages
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        window-select     ; visually switch windows
-       neotree           ; a project drawer, like NERDTree for vim
-       ;; treemacs          ; a project drawer, like neotree but cooler
+       ;; neotree           ; a project drawer, like NERDTree for vim
+       treemacs          ; a project drawer, like neotree but cooler
 
        :tools
        editorconfig      ; let someone else argue about tabs vs spaces
@@ -72,12 +73,12 @@
        :editor
        ;; format
        multiple-cursors  ; editing in many places at once
-      ;parinfer          ; turn lisp into python, sort of
+                                        ;parinfer          ; turn lisp into python, sort of
        rotate-text       ; cycle region at point between text candidates
 
        :lang
        ;; assembly          ; assembly for fun or debugging
-       ;; (cc +irony +rtags)                ; C/C++/Obj-C madness
+       (cc +irony +rtags)                ; C/C++/Obj-C madness
        ;; crystal           ; ruby at the speed of c
        ;; clojure           ; java with a lisp
        ;; csharp            ; unity, .NET, and mono shenanigans
@@ -132,16 +133,16 @@
        ;; notmuch
        ;; regex
        ;; email              ; emacs as an email client
-       ;irc               ; how neckbeards socialize
-       ;(rss +org)        ; emacs as an RSS reader
-       twitter           ; twitter client https://twitter.com/vnought
-       ;(write            ; emacs as a word processor (latex + org + markdown)
-       ; +wordnut         ; wordnet (wn) search
+                                        ;irc               ; how neckbeards socialize
+                                        ;(rss +org)        ; emacs as an RSS reader
+       ;; twitter           ; twitter client https://twitter.com/vnought
+                                        ;(write            ; emacs as a word processor (latex + org + markdown)
+                                        ; +wordnut         ; wordnet (wn) search
 
-        :collab
-      ;floobits          ; peer programming for a price
-      ;impatient-mode    ; show off code over HTTP
-      ; +langtool)       ; a proofreader (grammar/style check) for Emacs
+       :collab
+                                        ;floobits          ; peer programming for a price
+                                        ;impatient-mode    ; show off code over HTTP
+                                        ; +langtool)       ; a proofreader (grammar/style check) for Emacs
 
        :config
        ;; The default module set reasonable defaults for Emacs. It also provides

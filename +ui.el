@@ -4,14 +4,14 @@
 
 (setq
  doom-font (font-spec :family "Fira Code" :size 9)
-  doom-theme 'mono
+ doom-theme 'mono
  +modeline-width 4
  +modeline-height 15
  display-line-numbers-type nil)
 
 ;; (after! helm-mode
-  ;; (setq +helm-posframe-text-scale -1
-        ;; ))
+;; (setq +helm-posframe-text-scale -1
+;; ))
 
 ;; without childframe
 (after! helm-mode
@@ -46,6 +46,13 @@
   (dolist (char-regexp alist)
     (set-char-table-range composition-function-table (car char-regexp)
                           `([,(cdr char-regexp) 0 font-shape-gstring]))))
+
+(after! ivy-posframe
+  (setq ivy-fixed-height-minibuffer nil
+        ivy-posframe-parameters
+        `((min-width . 120)
+          (min-height . 17)
+          (internal-border-width . 5))))
 
 ;; customize popups
 (set-popup-rules!

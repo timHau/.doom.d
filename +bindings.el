@@ -53,7 +53,7 @@
       "M-Z"       #'undo-tree-redo
       :v "V"      #'evil-visual-line
       :i "C-t"    #'transpose-chars
-      :i "C-o"    #'newline-without-break-of-line
+      :i "C-o"    #'+private-newline-without-break-of-line
 
       ;; Other sensible, textmate-esque global bindings
       :ne "M-r"   #'+eval/buffer
@@ -81,12 +81,12 @@
         :desc "Ex command"              :nv ";"  #'evil-ex
         :desc "M-x"                     :nv ":"  #'execute-extended-command
         :desc "Org Capture"             :nv "X"  #'org-capture
-        ;; :desc "kill-ring"               :nv "y"  #'counsel-yank-pop
-        :desc "kill-ring"               :nv "y"  #'helm-show-kill-ring
+        :desc "kill-ring"               :nv "y"  #'counsel-yank-pop
+        ;; :desc "kill-ring"               :nv "y"  #'helm-show-kill-ring
 
         ;; Most commonly used
         :desc "Find file in project"    :n "SPC" #'projectile-find-file
-        :desc "Toggle Buffers"          :n "TAB" #'switch-to-previous-buffer
+        :desc "Toggle Buffers"          :n "TAB" #'+private-switch-to-previous-buffer
         :desc "Switch buffer"           :n "<"   #'switch-to-buffer
         :desc "Jump to bookmark"        :n "RET" #'bookmark-jump
 
@@ -96,7 +96,8 @@
 
         (:desc "search" :prefix "s"
           :desc "buffer"                :nv "s" #'swiper
-          :desc "project"               :nv "a" #'helm-do-ag-project-root
+          ;; :desc "project"               :nv "a" #'helm-do-ag-project-root
+          :desc "project"               :nv "a" #'+ivy:ag-from-cwd
           :desc "Imenu"                 :nv "i" #'imenu
           :desc "Imenu across buffers"  :nv "I" #'imenu-anywhere
           :desc "Online providers"      :nv "o" #'+jump/online-select)
@@ -211,10 +212,9 @@
           :desc "Dired"                 :n  "d" #'dired-at-point
           :desc "REPL"                  :n  "r" #'+eval/open-repl
                                         :v  "r" #'+eval:repl
-          ;; :desc "Treemacs"              :n  "t" #'+treemacs/toggle
+          :desc "Treemacs"              :n  "t" #'+treemacs/toggle
           :desc "Neotree"               :n  "n" #'neotree-toggle
           :desc "Terminal"              :n  "T" #'+term/open-popup
-          :desc "Twitter"               :n  "t" #'twit
           :desc "eshell"                :n  "e" #'eshell
           :desc "pass"                  :n  "p" #'pass
           :desc "weather"               :n  "w" #'wttrin

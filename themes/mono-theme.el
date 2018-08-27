@@ -33,6 +33,7 @@ determine the exact padding."
 
   ;; name        default   256       16
   ((bg         '("#2b2b2d" nil       nil            ))
+   (box-bg     '("#060b19" nil       nil            ))
    (bg-alt     '("#21242b" nil       nil            ))
    (base0      '("#1B2229" "black"   "black"        ))
    (base1      '("#1c1f24" "#1e1e1e" "brightblack"  ))
