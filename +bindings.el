@@ -208,11 +208,12 @@
         (:desc "open" :prefix "o"
           :desc "agenda"                :n  "a" #'org-agenda
           :desc "Default browser"       :n  "b" #'browse-url-of-file
+          :desc "Customize"             :n  "c" #'customize
           :desc "Debugger"              :n  "d" #'+debug/open
           :desc "Dired"                 :n  "d" #'dired-at-point
           :desc "REPL"                  :n  "r" #'+eval/open-repl
                                         :v  "r" #'+eval:repl
-          :desc "Treemacs"              :n  "t" #'+treemacs/toggle
+          :desc "Treemacs"              :n  "t" #'treemacs
           :desc "Neotree"               :n  "n" #'neotree-toggle
           :desc "Terminal"              :n  "T" #'+term/open-popup
           :desc "eshell"                :n  "e" #'eshell
@@ -549,6 +550,12 @@
       ;; rotate-text
       :n  "!"  #'rotate-text
 
+      ;; ivy
+      (:after counsel
+        :map counsel-find-file-map
+        [left]  #'ivy-backward-delete-char
+        [right]  #'ivy-alt-done)
+
       ;; undo-tree -- undo/redo for visual regions
       :v "C-u" #'undo-tree-undo
       :v "C-r" #'undo-tree-redo
@@ -575,7 +582,6 @@
           "<backspace>" nil
           "<M-left>"    nil
           "<M-right>"   nil))
-
 
       ;; --- Term mode bindings --------------------------
       (:after term-mode

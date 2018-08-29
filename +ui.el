@@ -18,14 +18,12 @@
   (setq +helm-global-prompt "➜  "
         helm-display-buffer-default-height 0.2))
 
-(after! doom-theme
-  ;; customize popups
-  (set-popup-rules!
-    '(("\\*eshell" :quit nil)
-      ("\\*intero" :quit nil)
-      ("\\*haskell\\*" :quit nil)
-      ("Sage\\*$" :quit nil)
-      ("\\*Customize" :side right :quit nil :width 0.4)))
+(set-popup-rules!
+  '(("\\*eshell" :quit nil)
+    ("\\*intero" :quit nil)
+    ("\\*haskell\\*" :quit nil)
+    ("Sage\\*$" :quit nil)
+    ("^\\*Customize" :side right :quit nil :size 0.3 :select t))
 
   ;; (let ((alist '(
   ;;                (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
@@ -60,7 +58,7 @@
 
 (after! ivy-posframe
   (setq ivy-fixed-height-minibuffer nil
-;        ivy-display-function #'ivy-posframe-display-at-lower-center
+                                        ;        ivy-display-function #'ivy-posframe-display-at-lower-center
         ivy-posframe-parameters
         `((min-width . 150)
           (min-height . 17)

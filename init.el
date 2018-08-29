@@ -86,6 +86,7 @@
        erlang            ; an elegant language for a more civilized age
        ;; elixir            ; erlang done right
        ;; elm               ; care for a cup of TEA?
+       common-lisp
        emacs-lisp        ; drown in parentheses
        ;; ess               ; emacs speaks statistics
        go                ; the hipster dialect

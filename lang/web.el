@@ -1,4 +1,4 @@
-;;; ~/.doom.d/lang/js.el -*- lexical-binding: t; -*-
+;;; ~/.doom.d/lang/web.el -*- lexical-binding: t; -*-
 
 (after! js2-mode
   ;; no semicolon warnings in js mode
