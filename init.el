@@ -24,9 +24,10 @@
        (ivy               ; a search engine for love and life
         +fuzzy
         +childframe)      ; uses childframes for popups (Emacs 26+ only)
-       ;; ido               ; the other *other* search engine...
+       ;; ido              ; the other *other* search engine...
 
        :ui
+       ;; deft              ; notational velocity for Emacs
        ;; (pretty-code +fira)
        vc-gutter         ; vcs diff in the fringe
        (popup            ; tame sudden yet inevitable temporary windows
@@ -40,7 +41,7 @@
        evil-goggles      ; display visual hints when editing in evil
        hl-todo           ; highlight TODO/FIXME/NOTE tags
        nav-flash         ; blink the current line after jumping
-                                        ;tabbar            ; FIXME an (incomplete) tab bar for Emacs
+       ;; tabbar            ; FIXME an (incomplete) tab bar for Emacs
        unicode           ; extended unicode support for various languages
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        window-select     ; visually switch windows
@@ -71,9 +72,9 @@
        ;; term              ; terminals in Emacs
 
        :editor
-       ;; format
+       ;; (format +onsave)
        multiple-cursors  ; editing in many places at once
-                                        ;parinfer          ; turn lisp into python, sort of
+      ;; parinfer          ; turn lisp into python, sort of
        rotate-text       ; cycle region at point between text candidates
 
        :lang
@@ -120,7 +121,7 @@
        ;; ruby              ; 1.step do {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
        ;; rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;; scala             ; java, but good
-       ;; sh                ; she sells (ba|z)sh shells on the C xor
+       ;; (sh +zsh)                ; she sells (ba|z)sh shells on the C xor
        ;;solidity          ; do you need a blockchain? No.
        ;; swift             ; who asked for emoji variables?
        ;; typescript        ; javascript, but better
@@ -134,8 +135,8 @@
        ;; notmuch
        ;; regex
        ;; email              ; emacs as an email client
-                                        ;irc               ; how neckbeards socialize
-                                        ;(rss +org)        ; emacs as an RSS reader
+       ;; irc               ; how neckbeards socialize
+       ;; (rss +org)        ; emacs as an RSS reader
        ;; twitter           ; twitter client https://twitter.com/vnought
                                         ;(write            ; emacs as a word processor (latex + org + markdown)
                                         ; +wordnut         ; wordnet (wn) search
@@ -150,5 +151,5 @@
        ;; a Spacemacs-inspired keybinding scheme, a custom yasnippet library,
        ;; and additional ex commands for evil-mode. Use it as a reference for
        ;; your own modules.
-       (default))
+       (default +evil-commands +snippets))
 
