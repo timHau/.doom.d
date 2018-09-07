@@ -475,7 +475,7 @@
       (:after tide
         :map tide-mode-map
         :localleader
-        :n "e"  #'nodejs-repl)
+        :n "n"  #'nodejs-repl)
 
       ;; helm
       (:after helm

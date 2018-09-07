@@ -23,7 +23,7 @@
     ("\\*intero" :quit nil)
     ("\\*haskell\\*" :quit nil)
     ("Sage\\*$" :quit nil)
-    ("^\\*Customize" :side right :quit nil :size 0.3 :select t)))
+    ("^\\*Customize" :side right :quit nil :size 0.4 :select t)))
 
 
 (after! ivy-posframe
