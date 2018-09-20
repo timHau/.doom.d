@@ -101,10 +101,11 @@
           :desc "project"               :nv "a" #'+ivy:ag
           :desc "Imenu"                 :nv "i" #'imenu
           :desc "Imenu across buffers"  :nv "I" #'imenu-anywhere
-          :desc "Online providers"      :nv "o" #'+jump/online-select)
+          :desc "Online providers"      :nv "o" #'+lookup/online)
 
         (:desc "jump" :prefix "j"
-          :desc "definiton" :nv "d" #'dumb-jump-go
+          :desc "definiton" :nv "d" #'+lookup/definition
+          :desc "jump"      :nv "j" #'dumb-jump-go
           :desc "word"      :nv "w" #'avy-goto-word-1
           :desc "line"      :nv "l" #'avy-goto-line)
 
@@ -152,8 +153,8 @@
                                             :v  "e" #'+eval/region
           :desc "Evaluate & replace region" :nv "E" #'+eval:replace-region
           :desc "Build tasks"               :nv "b" #'+eval/build
-          :desc "Jump to definition"        :n  "d" #'+jump/definition
-          :desc "Jump to references"        :n  "D" #'+jump/references
+          :desc "Jump to definition"        :n  "d" #'+lookup/definition
+          :desc "Jump to references"        :n  "D" #'+lookup/references
           :desc "Open REPL"                 :n  "r" #'+eval/open-repl
                                             :v  "r" #'+eval:repl)
 
