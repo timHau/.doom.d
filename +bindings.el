@@ -54,6 +54,7 @@
       :v "V"      #'evil-visual-line
       :i "C-t"    #'transpose-chars
       :i "C-o"    #'newline-without-break-of-line
+      :i "C-ö"    #'company-complete-common
 
       ;; Other sensible, textmate-esque global bindings
       :ne "M-r"   #'+eval/buffer
@@ -189,6 +190,7 @@
           :desc "Toggle Emacs log"      :n  "m" #'doom/popup-toggle-messages
           :desc "Command log"           :n  "L" #'global-command-log-mode
           :desc "Describe function"     :n  "f" #'describe-function
+          :desc "Google Translate"      :n  "t" #'google-translate-at-point
           :desc "Describe key"          :n  "k" #'describe-key
           :desc "Describe char"         :n  "c" #'describe-char
           :desc "Describe mode"         :n  "M" #'describe-mode
@@ -200,6 +202,10 @@
           :desc "active minor modes"    :n  ";" #'doom/describe-active-minor-mode
           :desc "Info"                  :n  "i" #'info
           :desc "Toggle profiler"       :n  "p" #'doom/toggle-profiler)
+
+        (:desc "list stuff" :prefix "l"
+          :desc "processes"             :n "p" #'list-processes
+          :desc "top"                   :n "t" #'helm-top)
 
         (:desc "notes" :prefix "n"
           :desc "Find file in notes"    :n  "n" #'+default/find-in-notes

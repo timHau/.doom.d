@@ -3,7 +3,6 @@
 (load! "./themes/mono-theme")
 
 (setq
- ;; doom-font (font-spec :family "Fira Code" :size 9)
  doom-font (font-spec :family "Source Code Pro" :size 9)
  doom-theme 'mono
  evil-normal-state-cursor '("DeepSkyBlue1" . 'box)

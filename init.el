@@ -17,6 +17,7 @@
        :completion
        (company          ; the ultimate code completion backend
         +auto            ; as-you-type code completion
+        +tng
         +childframe)     ; a nicer company UI. Emacs +26 only!
        ;; (helm             ; the *other* search engine for love and life
        ;; +fuzzy
@@ -55,7 +56,8 @@
        macos             ; MacOS-specific commands
        ;; make              ; run make tasks from Emacs
        magit             ;
-       password-store    ; password manager for nerds
+       (password-store
+        +auth)    ; password manager for nerds
        ;; pdf               ; pdf enhancements
        rgb               ; creating color strings
        ;; tmux              ; an API for interacting with tmux
