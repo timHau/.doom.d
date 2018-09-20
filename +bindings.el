@@ -205,7 +205,7 @@
           :desc "Toggle profiler"       :n  "p" #'doom/toggle-profiler)
 
         (:desc "list stuff" :prefix "l"
-          :desc "processes"             :n "p" #'list-processes
+          :desc "processes"             :n "p" #'counsel-list-processes
           :desc "top"                   :n "t" #'helm-top)
 
         (:desc "notes" :prefix "n"
@@ -284,9 +284,9 @@
       :n  "[w" #'+workspace/switch-left
       :m  "gt" #'+workspace/switch-right
       :m  "gT" #'+workspace/switch-left
-      :m  "gd" #'+jump/definition
-      :m  "gD" #'+jump/references
-      :m  "gh" #'+jump/documentation
+      :m  "gd" #'+lookup/definition
+      :m  "gD" #'+lookup/references
+      :m  "gh" #'+lookup/documentation
       :n  "gp" #'+evil/reselect-paste
       :n  "gr" #'+eval:region
       :n  "gR" #'+eval/buffer
