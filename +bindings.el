@@ -48,7 +48,7 @@
       "A-b"       #'backward-word
       "A-f"       #'forward-word
       "C-a"       #'doom/backward-to-bol-or-indent
-      "A--"       #'shrink-window
+      "M-ü"       #'shrink-window
       "M-z"       #'undo-tree-undo
       "M-Z"       #'undo-tree-redo
       :v "V"      #'evil-visual-line
@@ -181,7 +181,8 @@
           :desc "Git revert buffer"     :n  "R" #'vc-revert
           :desc "List gists"            :n  "g" #'+gist:list
           :desc "Next hunk"             :nv "]" #'git-gutter:next-hunk
-          :desc "Previous hunk"         :nv "[" #'git-gutter:previous-hunk)
+          :desc "Previous hunk"         :nv "[" #'git-gutter:previous-hunk
+          :desc "Counsel log"           :nv "l" #'counsel-git-log)
 
         (:desc "help" :prefix "h"
           :n "h" help-map
