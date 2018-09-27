@@ -3,7 +3,7 @@
   (interactive)
   (let ((oldpos (point)))
     (beginning-of-line)
-    (doom*newline-and-indent 3)
+    (newline-and-indent)
     (previous-line)))
 
 ;;;###autoload
