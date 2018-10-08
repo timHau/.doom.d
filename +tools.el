@@ -2,7 +2,7 @@
 
 (after! company
   (setq
-   company-idle-delay 0.2
+   company-idle-delay 0
    company-auto-complete-chars nil
    company-show-numbers t
    company-tooltip-minimum-width 50

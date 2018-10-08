@@ -35,3 +35,10 @@
 
 (after! highlight-indentation-mode
   (set-face-background 'highlight-indentation-face "#e3e3d3"))
+
+(after! ivy
+  (setq counsel-yank-pop-separator "
+
+____________________________________________
+
+"))

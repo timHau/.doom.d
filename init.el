@@ -7,8 +7,8 @@
        ;; file-templates    ; auto-snippets for empty files
        (lookup           ; helps you navigate your code and documentation
         )
-        ;; +devdocs         ; ...on devdocs.io online
-        ;; +docsets)        ; ...or in Dash docsets locally
+       ;; +devdocs         ; ...on devdocs.io online
+       ;; +docsets)        ; ...or in Dash docsets locally
        snippets          ; my elves. They type so I don't have to
        spellcheck        ; tasing you for misspelling mispelling
        (syntax-checker   ; tasing you for every semicolon you forget
@@ -51,6 +51,8 @@
        treemacs          ; a project drawer, like neotree but cooler
 
        :tools
+       ;;ansible
+       docker
        editorconfig      ; let someone else argue about tabs vs spaces
        ;; ein               ; tame Jupyter notebooks with emacs
        ;; gist              ; interacting with github gists
@@ -77,7 +79,7 @@
        :editor
        ;; (format +onsave)
        multiple-cursors  ; editing in many places at once
-      ;; parinfer          ; turn lisp into python, sort of
+       ;; parinfer          ; turn lisp into python, sort of
        rotate-text       ; cycle region at point between text candidates
 
        :lang
@@ -141,13 +143,13 @@
        ;; irc               ; how neckbeards socialize
        ;; (rss +org)        ; emacs as an RSS reader
        ;; twitter           ; twitter client https://twitter.com/vnought
-                                        ;(write            ; emacs as a word processor (latex + org + markdown)
-                                        ; +wordnut         ; wordnet (wn) search
+       ;; (write            ; emacs as a word processor (latex + org + markdown)
+       ;; +wordnut         ; wordnet (wn) search
 
        :collab
-                                        ;floobits          ; peer programming for a price
-                                        ;impatient-mode    ; show off code over HTTP
-                                        ; +langtool)       ; a proofreader (grammar/style check) for Emacs
+       ;; floobits          ; peer programming for a price
+       ;; impatient-mode    ; show off code over HTTP
+       ;; +langtool)       ; a proofreader (grammar/style check) for Emacs
 
        :config
        ;; The default module set reasonable defaults for Emacs. It also provides

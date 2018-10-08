@@ -55,7 +55,7 @@
       :i "C-t"    #'transpose-chars
       :i "C-o"    #'newline-without-break-of-line
       :i "C-ö"    #'company-complete-common
-      :ne "M-p"    #'+ivy:ag
+      :ne "M-p"    #'counsel-ag
 
       ;; Other sensible, textmate-esque global bindings
       :ne "M-r"   #'+eval/buffer
@@ -99,7 +99,7 @@
         (:desc "search" :prefix "s"
           :desc "buffer"                :nv "s" #'swiper
           ;; :desc "project"               :nv "a" #'helm-do-ag-project-root
-          :desc "project"               :nv "a" #'+ivy:ag
+          :desc "project"               :nv "a" #'counsel-ag
           :desc "Imenu"                 :nv "i" #'imenu
           :desc "Imenu across buffers"  :nv "I" #'imenu-anywhere
           :desc "Online providers"      :nv "o" #'+lookup/online)
