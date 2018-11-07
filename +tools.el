@@ -5,9 +5,9 @@
    company-idle-delay 0
    company-auto-complete-chars nil
    company-show-numbers t
-   company-tooltip-minimum-width 50
-   company-tooltip-minimum-height 60
-   company-tooltip-limit 22
+   ;; company-tooltip-minimum-width 50
+   ;; company-tooltip-minimum-height 60
+   ;; company-tooltip-limit 22
    company-minimum-prefix-length 2))
 
 ;; sage math

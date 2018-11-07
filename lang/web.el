@@ -3,7 +3,8 @@
 (after! js2-mode
   ;; no semicolon warnings in js mode
   (setq js2-strict-missing-semi-warning nil
-        js2-missing-semi-one-line-override nil)
+        js2-missing-semi-one-line-override nil
+        js2-mode-show-parse-errors t)
   (setq-default web-mode-indent-style 2
                 line-spacing 2
                 js-indent-level 2

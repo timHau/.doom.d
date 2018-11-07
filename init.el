@@ -63,7 +63,7 @@
         +auth)    ; password manager for nerds
        ;; pdf               ; pdf enhancements
        rgb               ; creating color strings
-       ;; tmux              ; an API for interacting with tmux
+       tmux              ; an API for interacting with tmux
        ;; upload            ; map local to remote projects via ssh/ftp
 
        :emacs
@@ -93,15 +93,16 @@
        ;; elixir            ; erlang done right
        ;; elm               ; care for a cup of TEA?
        common-lisp
+       ;;coq               ; proofs-as-programs
        emacs-lisp        ; drown in parentheses
        ;; ess               ; emacs speaks statistics
        go                ; the hipster dialect
        (haskell +intero) ; a language that's lazier than I am
        ;; hy                ; readability of scheme w/ speed of python
-       ;; (java +meghanada) ; the poster child for carpal tunnel syndrome
+       (java +meghanada) ; the poster child for carpal tunnel syndrome
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
        ;; julia             ; a better, faster MATLAB
-       latex             ; writing papers in Emacs has never been so fun
+       (latex +skim)            ; writing papers in Emacs has never been so fun
        ;; ledger            ; an accounting system in Emacs
        ;; lua               ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore
@@ -119,7 +120,7 @@
        ;; php               ; perl's insecure younger brother
        ;; plantuml          ; diagrams for confusing people more
        ;; purescript        ; javascript, but functional
-       ;; python            ; beautiful is better than ugly
+        python            ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        ;; rest              ; Emacs as a REST client
@@ -127,9 +128,8 @@
        ;; rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;; scala             ; java, but good
        ;; (sh +zsh)                ; she sells (ba|z)sh shells on the C xor
-       ;;solidity          ; do you need a blockchain? No.
+       ;; solidity          ; do you need a blockchain? No.
        ;; swift             ; who asked for emoji variables?
-       ;; typescript        ; javascript, but better
        web               ; the tubes
 
        ;; Applications are complex and opinionated modules that transform Emacs
@@ -137,7 +137,6 @@
        ;; should be loaded late.
        :app
        ;; calendar
-       ;; notmuch
        ;; regex
        ;; email              ; emacs as an email client
        ;; irc               ; how neckbeards socialize
@@ -145,6 +144,7 @@
        ;; twitter           ; twitter client https://twitter.com/vnought
        ;; (write            ; emacs as a word processor (latex + org + markdown)
        ;; +wordnut         ; wordnet (wn) search
+       ;; +langtool)       ; a proofreader (grammar/style check) for Emacs
 
        :collab
        ;; floobits          ; peer programming for a price
