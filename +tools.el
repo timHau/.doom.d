@@ -2,13 +2,13 @@
 
 (after! company
   (setq
-   company-idle-delay 0
+   company-idle-delay 0.1
    company-auto-complete-chars nil
    company-show-numbers t
-   ;; company-tooltip-minimum-width 50
+   company-tooltip-minimum-width 50
    ;; company-tooltip-minimum-height 60
-   ;; company-tooltip-limit 22
-   company-minimum-prefix-length 2))
+   company-tooltip-limit 25
+   company-minimum-prefix-length 3))
 
 ;; sage math
 (def-package! sage-shell-mode
@@ -18,6 +18,10 @@
 (after! wttrin
   :init (setq wttrin-default-cities '("Frankfurt am Main")
               wttrin-default-accept-language '("Accept-Language" . "de-DE,de;q=0.9,en;q=0.8,en-US;q=0.7,fr;q=0.6")))
+
+(after! latex
+  (setq +latex-enable-unicode-math t))
+
 
 ;; inf-mongo
 (def-package! inf-mongo)

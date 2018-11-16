@@ -17,7 +17,6 @@
 
        :completion
        (company          ; the ultimate code completion backend
-        +auto            ; as-you-type code completion
         +tng
         +childframe)     ; a nicer company UI. Emacs +26 only!
        ;; (helm             ; the *other* search engine for love and life
@@ -102,7 +101,7 @@
        (java +meghanada) ; the poster child for carpal tunnel syndrome
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
        ;; julia             ; a better, faster MATLAB
-       (latex +skim)            ; writing papers in Emacs has never been so fun
+       (latex +unicode-math)            ; writing papers in Emacs has never been so fun
        ;; ledger            ; an accounting system in Emacs
        ;; lua               ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore

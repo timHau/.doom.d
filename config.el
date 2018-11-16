@@ -20,6 +20,7 @@
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
 
+
 ;; ;; Makes ; and , the universal repeat-keys in evil-mode
 ;; (defmacro do-repeat! (command next-func prev-func)
 ;;   "Repeat motions with ;/,"

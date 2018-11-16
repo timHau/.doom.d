@@ -1,14 +1,15 @@
 ;;; +ui.el --- description -*- lexical-binding: t; -*-
 
-(load! "./themes/mono-theme")
+;; (load! "./themes/mono-theme")
+(load! "./themes/blue-theme")
 
 (setq
- doom-font (font-spec :family "Source Code Pro" :size 9)
+ doom-font (font-spec :family "Source Code Pro" :size 10)
  doom-theme 'mono
  evil-normal-state-cursor '("DeepSkyBlue1" . 'box)
  evil-insert-state-cursor '("#00ff00" . 'bar)
  +modeline-width 4
- +modeline-height 15
+ +modeline-height 16
  display-line-numbers-type nil)
 
 
@@ -29,7 +30,7 @@
   (setq ivy-fixed-height-minibuffer nil
         ; ivy-display-function #'ivy-posframe-display-at-lower-center
         ivy-posframe-parameters
-        `((min-width . 150)
+        `((min-width . 130)
           (min-height . 17)
           (internal-border-width . 5))))
 
