@@ -48,7 +48,8 @@
       "A-b"       #'backward-word
       "A-f"       #'forward-word
       "C-a"       #'doom/backward-to-bol-or-indent
-      "M-ü"       #'shrink-window
+      "M-ä"       #'shrink-window
+      "M-ü"       #'enlarge-window
       "M-z"       #'undo-tree-undo
       "M-Z"       #'undo-tree-redo
       :v "V"      #'evil-visual-line
