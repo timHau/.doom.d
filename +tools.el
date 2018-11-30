@@ -7,7 +7,7 @@
    company-show-numbers t
    company-tooltip-minimum-width 50
    ;; company-tooltip-minimum-height 60
-   company-tooltip-limit 25
+   company-tooltip-limit 15
    company-minimum-prefix-length 3))
 
 ;; sage math
@@ -71,3 +71,7 @@
   (defun google-translate--get-b-d1 ()
     ;; TKK='427110.1469889687'
     (list 427110 1469889687)))
+
+;; (use-package fogbugz
+;;   :init (setq fogbugz-url "nest.meso.net")
+;;   :load-path "~/Desktop/tts/fogbugz")

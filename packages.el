@@ -5,3 +5,4 @@
 (package! wttrin)
 (package! exec-path-from-shell :disable t)
 (package! inf-mongo)
+(package! request)
