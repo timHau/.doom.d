@@ -1,11 +1,12 @@
 ;;; +ui.el --- description -*- lexical-binding: t; -*-
 
 ;; (load! "./themes/mono-theme")
-(load! "./themes/blue-theme")
+;; (load! "./themes/blue-theme")
+(load! "./themes/gray-theme")
 
 (setq
  doom-font (font-spec :family "Source Code Pro" :size 10)
- doom-theme 'mono
+ doom-theme 'gray
  evil-normal-state-cursor '("DeepSkyBlue1" . 'box)
  evil-insert-state-cursor '("#00ff00" . 'bar)
  +modeline-width 4
