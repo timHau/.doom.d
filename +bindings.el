@@ -146,19 +146,20 @@
           :desc "Pop scratch buffer"      :n "x" #'doom/open-scratch-buffer
           :desc "Bury buffer"             :n "z" #'bury-buffer
           :desc "Next buffer"             :n "n" #'next-buffer
+          :desc "Indent whole buffer"     :n "i" #'indent-whole-buffer
           :desc "Previous buffer"         :n "p" #'previous-buffer
           :desc "Sudo edit this file"     :n "S" #'doom/sudo-this-file)
 
         (:desc "code" :prefix "c"
           :desc "List errors"               :n  "x" #'flycheck-list-errors
           :desc "Evaluate buffer/region"    :n  "e" #'+eval/buffer
-                                            :v  "e" #'+eval/region
+          :v  "e" #'+eval/region
           :desc "Evaluate & replace region" :nv "E" #'+eval:replace-region
           :desc "Build tasks"               :nv "b" #'+eval/build
           :desc "Jump to definition"        :n  "d" #'+lookup/definition
           :desc "Jump to references"        :n  "D" #'+lookup/references
           :desc "Open REPL"                 :n  "r" #'+eval/open-repl
-                                            :v  "r" #'+eval:repl)
+          :v  "r" #'+eval:repl)
 
         (:desc "docker" :prefix "d"
           :desc "compose up"                :n "u" #'docker-compose-up
@@ -228,7 +229,7 @@
           :desc "Debugger"              :n  "d" #'+debug/open
           :desc "Dired"                 :n  "d" #'dired-at-point
           :desc "REPL"                  :n  "r" #'+eval/open-repl
-                                        :v  "r" #'+eval:repl
+          :v  "r" #'+eval:repl
           :desc "Treemacs"              :n  "t" #'treemacs
           :desc "Neotree"               :n  "n" #'neotree-toggle
           :desc "Terminal"              :n  "T" #'+term/open-popup
@@ -688,8 +689,8 @@
 
       (:after sage-shell-mode
         (:map sage-shell-mode-map
-        "C-p" #'previous-buffer
-        "C-k" #'widget-kill-line))
+          "C-p" #'previous-buffer
+          "C-k" #'widget-kill-line))
 
       ;; Restore common editing keys (and ESC) in minibuffer
       (:map (minibuffer-local-map

@@ -17,7 +17,6 @@
 
        :completion
        (company          ; the ultimate code completion backend
-        +tng
         +childframe)     ; a nicer company UI. Emacs +26 only!
        ;; (helm             ; the *other* search engine for love and life
        ;; +fuzzy
@@ -50,7 +49,7 @@
        treemacs          ; a project drawer, like neotree but cooler
 
        :tools
-       ;;ansible
+       ansible
        docker
        editorconfig      ; let someone else argue about tabs vs spaces
        ;; ein               ; tame Jupyter notebooks with emacs
@@ -124,7 +123,7 @@
        ;;racket            ; a DSL for DSLs
        ;; rest              ; Emacs as a REST client
        ;; ruby              ; 1.step do {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
-       ;; rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
+       rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;; scala             ; java, but good
        ;; (sh +zsh)                ; she sells (ba|z)sh shells on the C xor
        ;; solidity          ; do you need a blockchain? No.
@@ -155,4 +154,4 @@
        ;; a Spacemacs-inspired keybinding scheme, a custom yasnippet library,
        ;; and additional ex commands for evil-mode. Use it as a reference for
        ;; your own modules.
-       (default +bindings +evil-commands +snippets))
+       (default +bindings +smartparens +snippets))
