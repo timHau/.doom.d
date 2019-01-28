@@ -494,6 +494,11 @@
         :localleader
         :n "n"  #'nodejs-repl)
 
+      (:after js2-mode
+        :map js2-mode-map
+        (:prefix "C-c"
+          :in "C-l"    #'js2r-log-this))
+
       ;; helm
       (:after helm
         (:map helm-map

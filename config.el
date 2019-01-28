@@ -13,6 +13,8 @@
 
 (setq-default mac-right-option-modifier nil)
 (setq mac-right-command-modifier 'control
+      mac-command-modifier 'meta
+      mac-option-modifier 'alt
       x-select-enable-clipboard t
       ns-function-modifier 'super
       shift-select-mode t)
