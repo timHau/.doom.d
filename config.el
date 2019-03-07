@@ -21,3 +21,5 @@
 
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
+(add-to-list 'default-frame-alist (cons 'width 275))
+(add-to-list 'default-frame-alist (cons 'height 250))

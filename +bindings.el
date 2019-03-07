@@ -68,8 +68,8 @@
       :ne "M-f"   #'swiper
       :ne "C-M-f" #'doom/toggle-fullscreen
       :n  "M-s"   #'save-buffer
-      :m  "A-j"   #'+default:multi-next-line
-      :m  "A-k"   #'+default:multi-previous-line
+      :m  "A-j"   #'multi-next-line
+      :m  "A-k"   #'multi-previous-line
       :nv "C-SPC" #'+evil:fold-toggle
       :gnvimer "M-v" #'clipboard-yank
       ;; Easier window navigation

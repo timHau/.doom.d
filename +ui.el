@@ -9,8 +9,7 @@
  doom-theme 'gray
  evil-normal-state-cursor '("DeepSkyBlue1" . 'box)
  evil-insert-state-cursor '("#00ff00" . 'bar)
- +modeline-width 4
- +modeline-height 16
+ doom-modeline-height 16
  display-line-numbers-type nil)
 
 

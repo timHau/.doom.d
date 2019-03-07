@@ -15,3 +15,13 @@
 (defun indent-whole-buffer ()
   (interactive)
   (indent-region (point-min) (point-max)))
+
+;;;###autoload
+(defun multi-previous-line ()
+  (interactive)
+  (next-line -5))
+
+;;;###autoload
+(defun multi-next-line ()
+  (interactive)
+  (next-line 5))

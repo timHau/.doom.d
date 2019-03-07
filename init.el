@@ -67,9 +67,7 @@
        :emacs
        vc                ; remember, remember that commit in November
        dired             ; making dired pretty [functional]
-       ediff             ; comparing files in Emacs
        electric          ; smarter, keyword-based electric-indent
-       ;; hideshow
        eshell            ; a consistent, cross-platform shell (WIP)
        ;; imenu             ; an imenu sidebar and searchable code index
        ;; term              ; terminals in Emacs
@@ -79,6 +77,8 @@
        multiple-cursors  ; editing in many places at once
        ;; parinfer          ; turn lisp into python, sort of
        rotate-text       ; cycle region at point between text candidates
+       fold
+       ;; lispy
 
        :lang
        ;; assembly          ; assembly for fun or debugging
