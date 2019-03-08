@@ -56,7 +56,7 @@
       :i "C-t"    #'transpose-chars
       :i "C-o"    #'newline-without-break-of-line
       :i "C-ö"    #'company-complete-common
-      :ne "M-p"    #'counsel-ag
+      :ne "M-p"   #'counsel-ag
 
       ;; Other sensible, textmate-esque global bindings
       :ne "M-r"   #'+eval/buffer

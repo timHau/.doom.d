@@ -1,15 +1,5 @@
 ;;; ~/.doom.d/+tools.el -*- lexical-binding: t; -*-
 
-(after! company
-  (setq
-   company-idle-delay 0.1
-   company-auto-complete-chars nil
-   company-show-numbers t
-   company-tooltip-minimum-width 50
-   ;; company-tooltip-minimum-height 60
-   company-tooltip-limit 15
-   company-minimum-prefix-length 3))
-
 ;; sage math
 (def-package! sage-shell-mode
   :config (sage-shell:define-alias))
@@ -18,9 +8,6 @@
 (after! wttrin
   :init (setq wttrin-default-cities '("Frankfurt am Main")
               wttrin-default-accept-language '("Accept-Language" . "de-DE,de;q=0.9,en;q=0.8,en-US;q=0.7,fr;q=0.6")))
-
-;; inf-mongo
-(def-package! inf-mongo)
 
 ;; smartparens
 (after! smartparens
@@ -68,6 +55,3 @@
     ;; TKK='427110.1469889687'
     (list 427110 1469889687)))
 
-;; (use-package fogbugz
-;;   :init (setq fogbugz-url "nest.meso.net")
-;;   :load-path "~/Desktop/tts/fogbugz")

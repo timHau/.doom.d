@@ -7,18 +7,16 @@
        ;; file-templates    ; auto-snippets for empty files
        (lookup           ; helps you navigate your code and documentation
         )
-       ;; +devdocs         ; ...on devdocs.io online
-       ;; +docsets)        ; ...or in Dash docsets locally
+       ;; +devdocs       ; ...on devdocs.io online
+       ;; +docsets)      ; ...or in Dash docsets locally
        snippets          ; my elves. They type so I don't have to
-       spellcheck        ; tasing you for misspelling mispelling
-       (syntax-checker   ; tasing you for every semicolon you forget
-        +childframe)     ; use childframes for error popups (Emacs 26+ only)
        workspaces        ; tab emulation, persistence & separate workspaces
 
        :completion
-       (company          ; the ultimate code completion backend
+       (company          ; the ultimate code completion
+        +auto            ; complete while tiping
         +childframe)     ; a nicer company UI. Emacs +26 only!
-       ;; (helm             ; the *other* search engine for love and life
+       ;; (helm          ; the *other* search engine for love and life
        ;; +fuzzy
        ;; +childframe)
        (ivy               ; a search engine for love and life
@@ -63,6 +61,8 @@
        rgb               ; creating color strings
        tmux              ; an API for interacting with tmux
        ;; upload            ; map local to remote projects via ssh/ftp
+       flyspell
+       flycheck
 
        :emacs
        vc                ; remember, remember that commit in November
