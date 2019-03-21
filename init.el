@@ -33,8 +33,8 @@
         +defaults)       ; default popup rules
        doom              ; what makes DOOM look the way it does
        doom-dashboard    ; a nifty splash screen for Emacs
-       ;; doom-modeline     ; a snazzy Atom-inspired mode-line
        modeline          ; a snazzy Atom-inspired mode-line but new
+       fci               ;
        ;; doom-quit         ; DOOM quit-message prompts when you quit Emacs
        evil-goggles      ; display visual hints when editing in evil
        hl-todo           ; highlight TODO/FIXME/NOTE tags
@@ -49,7 +49,7 @@
        :tools
        lsp
        ;; ansible
-       docker
+       ;; docker
        editorconfig      ; let someone else argue about tabs vs spaces
        ;; ein               ; tame Jupyter notebooks with emacs
        ;; gist              ; interacting with github gists
@@ -81,7 +81,7 @@
        ;; parinfer          ; turn lisp into python, sort of
        rotate-text       ; cycle region at point between text candidates
        fold
-       ;;lispy             ; vim for lisp, for people who dont like vim
+       ;; lispy             ; vim for lisp, for people who dont like vim
 
        :lang
        ;; assembly          ; assembly for fun or debugging
@@ -94,7 +94,7 @@
        ;; elixir            ; erlang done right
        ;; elm               ; care for a cup of TEA?
        common-lisp
-       ;;coq               ; proofs-as-programs
+       ;; coq               ; proofs-as-programs
        emacs-lisp        ; drown in parentheses
        ;; ess               ; emacs speaks statistics
        go                ; the hipster dialect
@@ -122,8 +122,8 @@
        ;; plantuml          ; diagrams for confusing people more
        ;; purescript        ; javascript, but functional
         python            ; beautiful is better than ugly
-       ;;qt                ; the 'cutest' gui framework ever
-       ;;racket            ; a DSL for DSLs
+       ;; qt                ; the 'cutest' gui framework ever
+       ;; racket            ; a DSL for DSLs
        ;; rest              ; Emacs as a REST client
        ;; ruby              ; 1.step do {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
        rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()

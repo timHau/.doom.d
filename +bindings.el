@@ -207,9 +207,7 @@
           :desc "Describe mode"         :n  "M" #'describe-mode
           :desc "Describe variable"     :n  "v" #'describe-variable
           :desc "Describe face"         :n  "F" #'describe-face
-          :desc "Describe DOOM setting" :n  "s" #'doom/describe-setting
           :desc "Describe DOOM module"  :n  "d" #'doom/describe-module
-          :desc "What face"             :n  "'" #'doom/what-face
           :desc "active minor modes"    :n  ";" #'doom/describe-active-minor-mode
           :desc "Info"                  :n  "i" #'info
           :desc "Toggle profiler"       :n  "p" #'doom/toggle-profiler)
