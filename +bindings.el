@@ -161,12 +161,6 @@
           :desc "Open REPL"                 :n  "r" #'+eval/open-repl
           :v  "r" #'+eval:repl)
 
-        (:desc "docker" :prefix "d"
-          :desc "compose up"                :n "u" #'docker-compose-up
-          :desc "compose down"              :n "d" #'docker-compose-down
-          :desc "inspect"                   :n "i" #'docker-inspect
-          :desc "kill"                      :n "k" #'docker-kill)
-
         (:desc "file" :prefix "f"
           :desc "Find file"                 :n "f" #'find-file
           :desc "Sudo find file"            :n ">" #'doom/sudo-find-file

@@ -2,7 +2,6 @@
 
 (load! "./+bindings")
 (load! "./+ui")
-;; (load! "./+mail")
 (load! "./+tools")
 
 (load! "./lang/web")
@@ -19,7 +18,3 @@
       ns-function-modifier 'super
       shift-select-mode t)
 
-(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
-(add-to-list 'default-frame-alist '(ns-appearance . dark))
-(add-to-list 'default-frame-alist (cons 'width 275))
-(add-to-list 'default-frame-alist (cons 'height 250))

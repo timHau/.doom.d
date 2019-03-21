@@ -1,7 +1,5 @@
 ;;; +ui.el --- description -*- lexical-binding: t; -*-
 
-;; (load! "./themes/mono-theme")
-;; (load! "./themes/blue-theme")
 (load! "./themes/gray-theme")
 
 (setq
@@ -28,7 +26,7 @@
 
 (after! ivy-posframe
   (setq ivy-fixed-height-minibuffer nil
-        ; ivy-display-function #'ivy-posframe-display-at-lower-center
+                                        ; ivy-display-function #'ivy-posframe-display-at-lower-center
         ivy-posframe-parameters
         `((min-width . 130)
           (min-height . 17)
@@ -43,3 +41,8 @@
 ____________________________________________
 
 "))
+
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+(add-to-list 'default-frame-alist '(ns-appearance . dark))
+(add-to-list 'default-frame-alist (cons 'width 275))
+(add-to-list 'default-frame-alist (cons 'height 250))

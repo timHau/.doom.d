@@ -34,7 +34,7 @@
        doom              ; what makes DOOM look the way it does
        doom-dashboard    ; a nifty splash screen for Emacs
        modeline          ; a snazzy Atom-inspired mode-line but new
-       fci               ;
+       ;; fci               ; show a fill-column indicator
        ;; doom-quit         ; DOOM quit-message prompts when you quit Emacs
        evil-goggles      ; display visual hints when editing in evil
        hl-todo           ; highlight TODO/FIXME/NOTE tags
@@ -97,11 +97,11 @@
        ;; coq               ; proofs-as-programs
        emacs-lisp        ; drown in parentheses
        ;; ess               ; emacs speaks statistics
-       go                ; the hipster dialect
+       (go +lsp)                ; the hipster dialect
        (haskell +intero) ; a language that's lazier than I am
        ;; hy                ; readability of scheme w/ speed of python
        ;; (java +meghanada) ; the poster child for carpal tunnel syndrome
-       javascript        ; all(hope(abandon(ye(who(enter(here))))))
+       (javascript +lsp)        ; all(hope(abandon(ye(who(enter(here))))))
        ;; julia             ; a better, faster MATLAB
        latex            ; writing papers in Emacs has never been so fun
        ;; ledger            ; an accounting system in Emacs
@@ -118,20 +118,20 @@
         +present         ; Emacs for presentations
         +publish)        ; Emacs+Org as a static site generator
        ;; perl              ; write code no one else can comprehend
-       ;; php               ; perl's insecure younger brother
+       ;; (php +lsp)               ; perl's insecure younger brother
        ;; plantuml          ; diagrams for confusing people more
        ;; purescript        ; javascript, but functional
-        python            ; beautiful is better than ugly
+       (python +lsp)            ; beautiful is better than ugly
        ;; qt                ; the 'cutest' gui framework ever
        ;; racket            ; a DSL for DSLs
        ;; rest              ; Emacs as a REST client
        ;; ruby              ; 1.step do {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
-       rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
+       (rust +lsp)              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;; scala             ; java, but good
        ;; (sh +zsh)                ; she sells (ba|z)sh shells on the C xor
        ;; solidity          ; do you need a blockchain? No.
        ;; swift             ; who asked for emoji variables?
-       web               ; the tubes
+       (web +lsp)               ; the tubes
 
        ;; Applications are complex and opinionated modules that transform Emacs
        ;; toward a specific purpose. They may have additional dependencies and
