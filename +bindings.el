@@ -242,9 +242,7 @@
             :desc "Reveal in Finder"          :n "o" #'+macos/reveal-in-finder
             :desc "Reveal project in Finder"  :n "O" #'+macos/reveal-project-in-finder
             :desc "Send to Transmit"          :n "u" #'+macos/send-to-transmit
-            :desc "Send project to Transmit"  :n "U" #'+macos/send-project-to-transmit
-            :desc "Send to Launchbar"         :n "l" #'+macos/send-to-launchbar
-            :desc "Send project to Launchbar" :n "L" #'+macos/send-project-to-launchbar))
+            :desc "Send project to Transmit"  :n "U" #'+macos/send-project-to-transmit))
 
         (:desc "project" :prefix "p"
           :desc "Browse project"          :n  "." #'+default/browse-project
@@ -373,7 +371,7 @@
       :n  "gx"  #'evil-exchange
 
       ;; evil-matchit
-      :nv [tab] #'+evil/matchit-or-toggle-fold
+      :nv [tab] #'evilmi-jump-items
 
       ;; evil-magit
       (:after evil-magit

@@ -10,7 +10,10 @@ lot not working as intended for you. I am using doom `develop` branch on macos.
 ``` shell
 npm install -g --save typescript
 npm i -g typescript-language-server
-pip install 'python-language-server[all]'
-```
+npm install --global vscode-css-languageserver-bin
 
-`
+pip install 'python-language-server[all]'
+
+rustup update
+rustup component add rls rust-analysis rust-src
+```

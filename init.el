@@ -85,7 +85,7 @@
 
        :lang
        ;; assembly          ; assembly for fun or debugging
-       ;; (cc +irony +rtags)                ; C/C++/Obj-C madness
+       ;; (cc +irony +rtags +lsp)                ; C/C++/Obj-C madness
        ;; crystal           ; ruby at the speed of c
        ;; clojure           ; java with a lisp
        ;; csharp            ; unity, .NET, and mono shenanigans
@@ -125,7 +125,7 @@
        ;; qt                ; the 'cutest' gui framework ever
        ;; racket            ; a DSL for DSLs
        ;; rest              ; Emacs as a REST client
-       ;; ruby              ; 1.step do {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
+       ;; (ruby +lsp)              ; 1.step do {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
        (rust +lsp)              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;; scala             ; java, but good
        ;; (sh +zsh)                ; she sells (ba|z)sh shells on the C xor

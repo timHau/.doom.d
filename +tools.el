@@ -4,11 +4,6 @@
 (def-package! sage-shell-mode
   :config (sage-shell:define-alias))
 
-;; wttrin
-(after! wttrin
-  :init (setq wttrin-default-cities '("Frankfurt am Main")
-              wttrin-default-accept-language '("Accept-Language" . "de-DE,de;q=0.9,en;q=0.8,en-US;q=0.7,fr;q=0.6")))
-
 ;; smartparens
 (after! smartparens
   (setq sp-autowrap-region t
@@ -55,3 +50,6 @@
     ;; TKK='427110.1469889687'
     (list 427110 1469889687)))
 
+(after! lsp
+  (setq lsp-ui-doc-max-height 15
+        lsp-ui-doc-max-width 50))

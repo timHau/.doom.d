@@ -2,6 +2,7 @@
 
 (load! "./themes/gray-theme")
 
+
 (setq
  doom-font (font-spec :family "Source Code Pro" :size 10)
  doom-theme 'gray
