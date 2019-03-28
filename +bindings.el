@@ -109,6 +109,8 @@
           :desc "definiton" :nv "d" #'+lookup/definition
           :desc "jump"      :nv "j" #'dumb-jump-go
           :desc "word"      :nv "w" #'avy-goto-word-1
+          :desc "Jump to definition"        :n  "d" #'+lookup/definition
+          :desc "Jump to references"        :n  "D" #'+lookup/references
           :desc "line"      :nv "l" #'avy-goto-line)
 
         (:desc "workspace" :prefix "+"
@@ -156,8 +158,6 @@
           :v  "e" #'+eval/region
           :desc "Evaluate & replace region" :nv "E" #'+eval:replace-region
           :desc "Build tasks"               :nv "b" #'+eval/build
-          :desc "Jump to definition"        :n  "d" #'+lookup/definition
-          :desc "Jump to references"        :n  "D" #'+lookup/references
           :desc "Open REPL"                 :n  "r" #'+eval/open-repl
           :v  "r" #'+eval:repl)
 
@@ -232,10 +232,10 @@
           :desc "messages"              :n  "m"  #'+popup/toggle
 
           ;; applications
-          :desc "APP: elfeed"           :n "E" #'=rss
-          :desc "APP: email"            :n "M" #'=email
+          ;; :desc "APP: elfeed"           :n "E" #'=rss
+          ;; :desc "APP: email"            :n "M" #'=email
           ;; :desc "APP: irc"              :n "i" #'znc-erc
-          :desc "APP: regex"            :n "X" #'=regex
+          :desc "APP: regex"            :n "X" #'regexp-builder
 
           ;; macos
           (:when IS-MAC
@@ -565,7 +565,7 @@
       ;; ivy
       (:after counsel
         :map counsel-find-file-map
-        [left]  #'ivy-backward-delete-char
+        [left]   #'ivy-backward-delete-char
         [right]  #'ivy-alt-done)
 
       ;; undo-tree -- undo/redo for visual regions

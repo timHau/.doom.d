@@ -5,8 +5,7 @@
        eval              ; run code, run (also, repls)
        (evil +everywhere); come to the dark side, we have cookies
        ;; file-templates    ; auto-snippets for empty files
-       (lookup           ; helps you navigate your code and documentation
-        )
+       lookup           ; helps you navigate your code and documentation
        ;; +devdocs       ; ...on devdocs.io online
        ;; +docsets)      ; ...or in Dash docsets locally
        snippets          ; my elves. They type so I don't have to
@@ -49,7 +48,7 @@
        :tools
        lsp
        ;; ansible
-       ;; docker
+       docker
        editorconfig      ; let someone else argue about tabs vs spaces
        ;; ein               ; tame Jupyter notebooks with emacs
        ;; gist              ; interacting with github gists
@@ -98,7 +97,9 @@
        emacs-lisp        ; drown in parentheses
        ;; ess               ; emacs speaks statistics
        (go +lsp)                ; the hipster dialect
-       (haskell +intero) ; a language that's lazier than I am
+       (haskell
+        +intero
+        +lsp)            ; a language that's lazier than I am
        ;; hy                ; readability of scheme w/ speed of python
        ;; (java +meghanada) ; the poster child for carpal tunnel syndrome
        (javascript +lsp)        ; all(hope(abandon(ye(who(enter(here))))))
