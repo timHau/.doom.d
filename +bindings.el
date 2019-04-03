@@ -489,6 +489,12 @@
         (:prefix "C-c"
           :in "C-l"    #'js2r-log-this))
 
+      ;; rust
+      (:after rust-mode
+        :map rust-mode-map
+        (:prefix "C-c"
+          :in "C-l"    #'rust-println-thing-at-point))
+
       ;; helm
       (:after helm
         (:map helm-map

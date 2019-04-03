@@ -25,3 +25,12 @@
 (defun multi-next-line ()
   (interactive)
   (next-line 5))
+
+;;;###autoload
+(defun rust-println-thing-at-point ()
+  (interactive)
+  (let ((current-word (thing-at-point 'word)))
+    (+default/newline-below)
+    (insert (format "println!(\"%s: {}\", %s);" current-word current-word))
+    (left-word)
+    (left-char 4)))
