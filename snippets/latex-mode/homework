@@ -1,0 +1,28 @@
+# -*- mode: snippet -*-
+# name: homework
+# key: homework!
+# --
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[normalem]{ulem}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\geometry{ a4paper, top=10mm }
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\author{Tim Hau, 6805665, Gruppe $1}
+\title{$2}
+\date{}
+
+\begin{document}
+\maketitle
+
+$3
+
+\end{document}

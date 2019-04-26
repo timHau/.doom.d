@@ -27,6 +27,7 @@
        ;; deft              ; notational velocity for Emacs
        ;; (pretty-code +fira)
        vc-gutter         ; vcs diff in the fringe
+       ;; indent-guides
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
         +defaults)       ; default popup rules
@@ -35,7 +36,7 @@
        modeline          ; a snazzy Atom-inspired mode-line but new
        ;; fci               ; show a fill-column indicator
        ;; doom-quit         ; DOOM quit-message prompts when you quit Emacs
-       evil-goggles      ; display visual hints when editing in evil
+       ophints           ; display visual hints when editing in evil
        hl-todo           ; highlight TODO/FIXME/NOTE tags
        nav-flash         ; blink the current line after jumping
        ;; tabbar            ; FIXME an (incomplete) tab bar for Emacs
@@ -104,7 +105,7 @@
        ;; (java +meghanada) ; the poster child for carpal tunnel syndrome
        (javascript +lsp)        ; all(hope(abandon(ye(who(enter(here))))))
        ;; julia             ; a better, faster MATLAB
-       latex            ; writing papers in Emacs has never been so fun
+       (latex +latexmk)            ; writing papers in Emacs has never been so fun
        ;; ledger            ; an accounting system in Emacs
        ;; lua               ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore

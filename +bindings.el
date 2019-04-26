@@ -110,7 +110,7 @@
           :desc "jump"      :nv "j" #'dumb-jump-go
           :desc "word"      :nv "w" #'avy-goto-word-1
           :desc "Jump to definition"        :n  "d" #'+lookup/definition
-          :desc "Jump to references"        :n  "D" #'+lookup/references
+          :desc "Jump to references"        :n  "r" #'+lookup/references
           :desc "line"      :nv "l" #'avy-goto-line)
 
         (:desc "workspace" :prefix "+"
