@@ -2,14 +2,9 @@
 
 (doom! :feature
        ;; debugger          ; FIXME stepping through code, to help you add bugs
-       eval              ; run code, run (also, repls)
-       (evil +everywhere); come to the dark side, we have cookies
        ;; file-templates    ; auto-snippets for empty files
-       lookup           ; helps you navigate your code and documentation
        ;; +devdocs       ; ...on devdocs.io online
        ;; +docsets)      ; ...or in Dash docsets locally
-       snippets          ; my elves. They type so I don't have to
-       workspaces        ; tab emulation, persistence & separate workspaces
 
        :completion
        (company          ; the ultimate code completion
@@ -24,6 +19,7 @@
        ;; ido              ; the other *other* search engine...
 
        :ui
+       workspaces        ; tab emulation, persistence & separate workspaces
        ;; deft              ; notational velocity for Emacs
        ;; (pretty-code +fira)
        vc-gutter         ; vcs diff in the fringe
@@ -47,6 +43,9 @@
        treemacs          ; a project drawer, like neotree but cooler
 
        :tools
+       (password-store
+        +auth)    ; password manager for nerds
+       eval              ; run code, run (also, repls)
        lsp
        ;; ansible
        docker
@@ -56,8 +55,6 @@
        macos             ; MacOS-specific commands
        ;; make              ; run make tasks from Emacs
        magit             ;
-       (password-store
-        +auth)    ; password manager for nerds
        ;; pdf               ; pdf enhancements
        rgb               ; creating color strings
        tmux              ; an API for interacting with tmux
@@ -71,11 +68,18 @@
         +ranger
         +icons)
        electric          ; smarter, keyword-based electric-indent
-       eshell            ; a consistent, cross-platform shell (WIP)
        ;; imenu             ; an imenu sidebar and searchable code index
        ;; term              ; terminals in Emacs
 
+       :term
+       eshell            ; a consistent, cross-platform shell (WIP)
+       ;;term            ; terminals in Emacs 
+       ;;vterm            ; another terminals in Emacs 
+
        :editor
+       snippets          ; my elves. They type so I don't have to
+       lookup           ; helps you navigate your code and documentation
+       (evil +everywhere); come to the dark side, we have cookies
        ;; (format +onsave)
        multiple-cursors  ; editing in many places at once
        ;; parinfer          ; turn lisp into python, sort of
