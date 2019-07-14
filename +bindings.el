@@ -355,6 +355,7 @@
           "C-SPC"      #'company-complete-common
           "C-h"        #'company-quickhelp-manual-begin
           "SPC"        nil
+          "RET"        #'company-complete-selection
           [tab]        #'company-complete-common-or-cycle
           [backtab]    #'company-select-previous
           [escape]     (λ! (company-abort) (evil-normal-state 1)))

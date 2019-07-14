@@ -8,7 +8,7 @@
 
        :completion
        (company          ; the ultimate code completion
-        +auto            ; complete while tiping
+       ;; +tng            ; Enables completion using only ~TAB~.
         +childframe)     ; a nicer company UI. Emacs +26 only!
        ;; (helm          ; the *other* search engine for love and life
        ;; +fuzzy
@@ -43,8 +43,8 @@
        treemacs          ; a project drawer, like neotree but cooler
 
        :tools
-       (password-store
-        +auth)    ; password manager for nerds
+       (pass
+         +auth)    ; password manager for nerds
        eval              ; run code, run (also, repls)
        lsp
        ;; ansible
@@ -61,6 +61,7 @@
        ;; upload            ; map local to remote projects via ssh/ftp
        flyspell
        flycheck
+       lookup           ; helps you navigate your code and documentation
 
        :emacs
        vc                ; remember, remember that commit in November
@@ -73,12 +74,11 @@
 
        :term
        eshell            ; a consistent, cross-platform shell (WIP)
-       ;;term            ; terminals in Emacs 
-       ;;vterm            ; another terminals in Emacs 
+       ;;term            ; terminals in Emacs
+       ;;vterm            ; another terminals in Emacs
 
        :editor
        snippets          ; my elves. They type so I don't have to
-       lookup           ; helps you navigate your code and documentation
        (evil +everywhere); come to the dark side, we have cookies
        ;; (format +onsave)
        multiple-cursors  ; editing in many places at once
@@ -117,12 +117,11 @@
        ;; nix               ; I hereby declare "nix geht mehr!"
        ;; ocaml             ; an objective camel
        (org              ; organize your plain life in plain text
-        +attach          ; custom attachment system
-        +babel           ; running code in org
-        +capture         ; org-capture in and outside of Emacs
-        +export          ; Exporting org to whatever you want
-        +present         ; Emacs for presentations
-        +publish)        ; Emacs+Org as a static site generator
+        +dragndrop
+        +ipython
+        +pandoc
+        +gnuplot
+        +present)
        ;; perl              ; write code no one else can comprehend
        ;; (php +lsp)               ; perl's insecure younger brother
        ;; plantuml          ; diagrams for confusing people more

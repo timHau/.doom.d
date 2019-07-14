@@ -142,7 +142,7 @@ determine the exact padding."
     :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-inactive-l)))
 
    ;; ivy-mode
-   (ivy-current-match :background base2 :distant-foreground base0 :weight 'normal)
+   (ivy-current-match :background base5 :distant-foreground base0 :weight 'normal)
 
    ;; --- major-mode faces -------------------
    ;; css-mode / scss-mode

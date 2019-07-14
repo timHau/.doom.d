@@ -43,13 +43,6 @@
 
   (setq org-confirm-babel-evaluate nil))
 
-;; https://github.com/atykhonov/google-translate/issues/52#issuecomment-423870290
-(def-package! google-translate
-  :config
-  (defun google-translate--get-b-d1 ()
-    ;; TKK='427110.1469889687'
-    (list 427110 1469889687)))
-
 (after! lsp
   (setq lsp-ui-doc-max-height 15
         lsp-ui-doc-max-width 50))
