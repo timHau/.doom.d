@@ -666,8 +666,8 @@
       :i "C-u" #'doom/backward-kill-to-bol-and-indent
 
       ;; textmate-esque newline insertion
-      :i [M-return]     #'evil-open-below
-      :i [S-M-return]   #'evil-open-above
+      [M-return]     #'evil-open-below
+      [S-M-return]   #'evil-open-above
       ;; textmate-esque deletion
       [M-backspace]     #'doom/backward-kill-to-bol-and-indent
       :i [backspace]    #'delete-backward-char

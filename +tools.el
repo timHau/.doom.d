@@ -9,8 +9,6 @@
   (setq sp-autowrap-region t
         sp-max-pair-length 2))
 
-(def-package! emacs-snippets :after yasnippet)
-
 (after! epa
   (setq epa-file-encrypt-to (or epa-file-encrypt-to user-mail-address)
         ;; With GPG 2.1, this forces gpg-agent to use the Emacs minibuffer to
