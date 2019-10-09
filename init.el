@@ -110,6 +110,7 @@
        (javascript +lsp)        ; all(hope(abandon(ye(who(enter(here))))))
        ;; julia             ; a better, faster MATLAB
        (latex +latexmk)            ; writing papers in Emacs has never been so fun
+       lean
        ;; ledger            ; an accounting system in Emacs
        ;; lua               ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore
