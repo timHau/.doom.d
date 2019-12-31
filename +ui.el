@@ -5,7 +5,8 @@
 
 (setq
  doom-font (font-spec :family "Source Code Pro" :size 10)
- doom-theme 'gray
+ ;; doom-theme 'gray
+ doom-theme 'doom-palenight
  evil-normal-state-cursor '("DeepSkyBlue1" . 'box)
  evil-insert-state-cursor '("#00ff00" . 'bar)
  doom-modeline-height 16

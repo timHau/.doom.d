@@ -1,11 +1,5 @@
 # -*- mode: snippet -*-
 # name: TODO
-# key: TODO
+# key: TODO              
 # --
-TODO \\\
-TODO \\\
-TODO \\\
-TODO \\\
-TODO \\\
-TODO \\\
-TODO
+\subsection*{\color{red}TODO}

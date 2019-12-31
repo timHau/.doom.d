@@ -38,7 +38,7 @@
       ;; general stuff
       :n "A-i"    #'evil-scroll-line-up
       :n "A-o"    #'evil-scroll-line-down
-      "C--"       #'comment-line
+      "C-,"       #'comment-line
       "A-t"       #'transpose-words
       "C-#"       #'kill-this-buffer
       :i "C-k"    #'widget-kill-line
@@ -224,11 +224,9 @@
           :desc "REPL"                  :n  "r" #'+eval/open-repl
           :v  "r" #'+eval:repl
           :desc "Treemacs"              :n  "t" #'treemacs
-          :desc "Neotree"               :n  "n" #'neotree-toggle
           :desc "Terminal"              :n  "T" #'+term/open-popup
           :desc "eshell"                :n  "e" #'eshell
           :desc "pass"                  :n  "p" #'pass
-          :desc "weather"               :n  "w" #'wttrin
           :desc "scratch buffer"        :n  "s"  #'doom/open-scratch-buffer
           :desc "messages"              :n  "m"  #'+popup/toggle
 

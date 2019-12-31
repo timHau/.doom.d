@@ -7,6 +7,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{geometry}
 \usepackage{amsmath,amsthm,amssymb}
+\usepackage{xcolor}
 \usepackage[normalem]{ulem}
 \usepackage{graphicx}
 \graphicspath{ {./img/} }

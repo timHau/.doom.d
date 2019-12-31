@@ -3,3 +3,4 @@
 
 (package! sage-shell-mode)
 (package! exec-path-from-shell :disable t)
+(package! cmake-mode)

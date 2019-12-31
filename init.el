@@ -100,13 +100,13 @@
        common-lisp
        ;; coq               ; proofs-as-programs
        emacs-lisp        ; drown in parentheses
-       ;; ess               ; emacs speaks statistics
+       ess               ; emacs speaks statistics
        (go +lsp)                ; the hipster dialect
        (haskell
         +intero
         +lsp)            ; a language that's lazier than I am
        ;; hy                ; readability of scheme w/ speed of python
-       ;; (java +meghanada) ; the poster child for carpal tunnel syndrome
+       (java +meghanada) ; the poster child for carpal tunnel syndrome
        (javascript +lsp)        ; all(hope(abandon(ye(who(enter(here))))))
        ;; julia             ; a better, faster MATLAB
        (latex +latexmk)            ; writing papers in Emacs has never been so fun
@@ -129,7 +129,7 @@
        ;; purescript        ; javascript, but functional
        (python +lsp)            ; beautiful is better than ugly
        ;; qt                ; the 'cutest' gui framework ever
-       ;; racket            ; a DSL for DSLs
+       racket            ; a DSL for DSLs
        ;; rest              ; Emacs as a REST client
        ;; (ruby +lsp)              ; 1.step do {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
        (rust +lsp)              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
@@ -163,4 +163,4 @@
        ;; a Spacemacs-inspired keybinding scheme, a custom yasnippet library,
        ;; and additional ex commands for evil-mode. Use it as a reference for
        ;; your own modules.
-       (default +bindings +smartparens +snippets))
+       (default +smartparens +snippets +bindings))

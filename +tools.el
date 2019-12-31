@@ -1,7 +1,7 @@
 ;;; ~/.doom.d/+tools.el -*- lexical-binding: t; -*-
 
 ;; sage math
-(def-package! sage-shell-mode
+(use-package! sage-shell-mode
   :config (sage-shell:define-alias))
 
 ;; smartparens
@@ -14,6 +14,8 @@
         ;; With GPG 2.1, this forces gpg-agent to use the Emacs minibuffer to
         ;; prompt for the key passphrase.
         epa-pinentry-mode 'loopback))
+
+(add-to-list 'auto-mode-alist '("\\.cmake\\'" . cmake-mode))
 
 ;; eshell
 ;; (after! eshell
@@ -28,18 +30,6 @@
  ;;  "gc"  "magit-commit"
  ;;  "ag"  "ag --color=always $*"))
 
-(after! org
-  (org-babel-do-load-languages
-   'org-babel-load-languages
-   '((python . t)
-     ;; (shell . t)
-     ;; (ruby . t)
-     ;; (clojure . t)
-     (js . t)
-     (sql . t)
-     (haskell . t)))
-
-  (setq org-confirm-babel-evaluate nil))
 
 (after! lsp
   (setq lsp-ui-doc-max-height 15

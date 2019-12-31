@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: scalar
+# key: scalar
+# --
+\langle $1 \rangle
