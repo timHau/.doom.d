@@ -1,10 +1,4 @@
-;;;###autoload
-(defun newline-without-break-of-line ()
-  (interactive)
-  (let ((oldpos (point)))
-    (beginning-of-line)
-    (newline-and-indent)
-    (previous-line)))
+;;; ~/.doom.d/autoload.el -*- lexical-binding: t; -*-
 
 ;;;###autoload
 (defun switch-to-previous-buffer ()
@@ -25,13 +19,3 @@
 (defun multi-next-line ()
   (interactive)
   (next-line 5))
-
-;;;###autoload
-(defun rust-println-thing-at-point ()
-  (interactive)
-  (let ((current-word (thing-at-point 'word)))
-    (evil-forward-paragraph)
-    (insert (format "println!(\"%s: {}\", %s);" current-word current-word))
-    (rust-mode-indent-line)
-    (left-word)
-    (left-char 4)))
