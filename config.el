@@ -72,7 +72,7 @@
 ;; smoother scrolling
 (map!
 
- ;; workspaces and buffers
+ ;; workspaces / buffers / windows / files
  "M-t"         #'+workspace/new
  "M-w"         #'delete-window
  "M-n"         #'evil-buffer-new
@@ -81,7 +81,7 @@
  "M-s"         #'save-buffer
  "M-r"         #'eval-buffer
  "M-a"         #'mark-whole-buffer
-
+ "A-r"         #'counsel-recentf
 
  ;; text bindings
  "M-+"         #'text-scale-increase
