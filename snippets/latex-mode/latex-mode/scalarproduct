@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: scalarproduct
+# key: sp
+# --
+\langle $1 , $2 \rangle
